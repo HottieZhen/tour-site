@@ -65,4 +65,27 @@
         <!-- 对资源文件内容缓存时间，单位秒 -->
         <property name="cacheSeconds" value="120" />
     </bean>
+
+    <!-- 自定义参数绑定 -->
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <!-- 转换器 -->
+        <property name="converters">
+            <list>
+                <!-- 日期类型转换 -->
+                <bean class="jx.tour.controller.converter.DateConverter"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 全局异常处理器
+	只要实现HandlerExceptionResolver接口就是全局异常处理器
+	 -->
+    <bean class="jx.tour.exception.ContentExceptionResolver"></bean>
+
+    <!-- 文件上传 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设置上传文件的最大尺寸为5MB -->
+        <property name="maxUploadSize" value="5242880"/>
+    </bean>
 </beans>
