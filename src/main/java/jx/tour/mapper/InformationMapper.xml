@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="jx.tour.mapper.AdsMapper" >
-  <resultMap id="BaseResultMap" type="jx.tour.pojo.Ads" >
+<mapper namespace="jx.tour.mapper.InformationMapper" >
+  <resultMap id="BaseResultMap" type="jx.tour.pojo.Information" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
-    <result column="subTitle" property="subtitle" jdbcType="VARCHAR" />
-    <result column="pic" property="pic" jdbcType="VARCHAR" />
     <result column="ptime" property="ptime" jdbcType="TIMESTAMP" />
+    <result column="pic" property="pic" jdbcType="VARCHAR" />
     <result column="stage" property="stage" jdbcType="INTEGER" />
   </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="jx.tour.pojo.Ads" extends="BaseResultMap" >
+  <resultMap id="ResultMapWithBLOBs" type="jx.tour.pojo.Information" extends="BaseResultMap" >
     <result column="describle" property="describle" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -71,12 +70,12 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, title, subTitle, pic, ptime, stage
+    id, title, ptime, pic, stage
   </sql>
   <sql id="Blob_Column_List" >
     describle
   </sql>
-  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="jx.tour.pojo.AdsExample" >
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="jx.tour.pojo.InformationExample" >
     select
     <if test="distinct" >
       distinct
@@ -84,7 +83,7 @@
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
-    from ads
+    from information
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -92,13 +91,13 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="jx.tour.pojo.AdsExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="jx.tour.pojo.InformationExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from ads
+    from information
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -111,29 +110,29 @@
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
-    from ads
+    from information
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from ads
+    delete from information
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="jx.tour.pojo.AdsExample" >
-    delete from ads
+  <delete id="deleteByExample" parameterType="jx.tour.pojo.InformationExample" >
+    delete from information
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="jx.tour.pojo.Ads" >
-    insert into ads (id, title, subTitle, 
-      pic, ptime, stage, 
-      describle)
-    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{subtitle,jdbcType=VARCHAR}, 
-      #{pic,jdbcType=VARCHAR}, #{ptime,jdbcType=TIMESTAMP}, #{stage,jdbcType=INTEGER}, 
-      #{describle,jdbcType=LONGVARCHAR})
+  <insert id="insert" parameterType="jx.tour.pojo.Information" >
+    insert into information (id, title, ptime, 
+      pic, stage, describle
+      )
+    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{ptime,jdbcType=TIMESTAMP}, 
+      #{pic,jdbcType=VARCHAR}, #{stage,jdbcType=INTEGER}, #{describle,jdbcType=LONGVARCHAR}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="jx.tour.pojo.Ads" >
-    insert into ads
+  <insert id="insertSelective" parameterType="jx.tour.pojo.Information" >
+    insert into information
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -141,14 +140,11 @@
       <if test="title != null" >
         title,
       </if>
-      <if test="subtitle != null" >
-        subTitle,
+      <if test="ptime != null" >
+        ptime,
       </if>
       <if test="pic != null" >
         pic,
-      </if>
-      <if test="ptime != null" >
-        ptime,
       </if>
       <if test="stage != null" >
         stage,
@@ -164,14 +160,11 @@
       <if test="title != null" >
         #{title,jdbcType=VARCHAR},
       </if>
-      <if test="subtitle != null" >
-        #{subtitle,jdbcType=VARCHAR},
+      <if test="ptime != null" >
+        #{ptime,jdbcType=TIMESTAMP},
       </if>
       <if test="pic != null" >
         #{pic,jdbcType=VARCHAR},
-      </if>
-      <if test="ptime != null" >
-        #{ptime,jdbcType=TIMESTAMP},
       </if>
       <if test="stage != null" >
         #{stage,jdbcType=INTEGER},
@@ -181,14 +174,14 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="jx.tour.pojo.AdsExample" resultType="java.lang.Integer" >
-    select count(*) from ads
+  <select id="countByExample" parameterType="jx.tour.pojo.InformationExample" resultType="java.lang.Integer" >
+    select count(*) from information
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update ads
+    update information
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
@@ -196,14 +189,11 @@
       <if test="record.title != null" >
         title = #{record.title,jdbcType=VARCHAR},
       </if>
-      <if test="record.subtitle != null" >
-        subTitle = #{record.subtitle,jdbcType=VARCHAR},
+      <if test="record.ptime != null" >
+        ptime = #{record.ptime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.pic != null" >
         pic = #{record.pic,jdbcType=VARCHAR},
-      </if>
-      <if test="record.ptime != null" >
-        ptime = #{record.ptime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.stage != null" >
         stage = #{record.stage,jdbcType=INTEGER},
@@ -217,12 +207,11 @@
     </if>
   </update>
   <update id="updateByExampleWithBLOBs" parameterType="map" >
-    update ads
+    update information
     set id = #{record.id,jdbcType=INTEGER},
       title = #{record.title,jdbcType=VARCHAR},
-      subTitle = #{record.subtitle,jdbcType=VARCHAR},
-      pic = #{record.pic,jdbcType=VARCHAR},
       ptime = #{record.ptime,jdbcType=TIMESTAMP},
+      pic = #{record.pic,jdbcType=VARCHAR},
       stage = #{record.stage,jdbcType=INTEGER},
       describle = #{record.describle,jdbcType=LONGVARCHAR}
     <if test="_parameter != null" >
@@ -230,31 +219,27 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update ads
+    update information
     set id = #{record.id,jdbcType=INTEGER},
       title = #{record.title,jdbcType=VARCHAR},
-      subTitle = #{record.subtitle,jdbcType=VARCHAR},
-      pic = #{record.pic,jdbcType=VARCHAR},
       ptime = #{record.ptime,jdbcType=TIMESTAMP},
+      pic = #{record.pic,jdbcType=VARCHAR},
       stage = #{record.stage,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="jx.tour.pojo.Ads" >
-    update ads
+  <update id="updateByPrimaryKeySelective" parameterType="jx.tour.pojo.Information" >
+    update information
     <set >
       <if test="title != null" >
         title = #{title,jdbcType=VARCHAR},
       </if>
-      <if test="subtitle != null" >
-        subTitle = #{subtitle,jdbcType=VARCHAR},
+      <if test="ptime != null" >
+        ptime = #{ptime,jdbcType=TIMESTAMP},
       </if>
       <if test="pic != null" >
         pic = #{pic,jdbcType=VARCHAR},
-      </if>
-      <if test="ptime != null" >
-        ptime = #{ptime,jdbcType=TIMESTAMP},
       </if>
       <if test="stage != null" >
         stage = #{stage,jdbcType=INTEGER},
@@ -265,22 +250,20 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="jx.tour.pojo.Ads" >
-    update ads
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="jx.tour.pojo.Information" >
+    update information
     set title = #{title,jdbcType=VARCHAR},
-      subTitle = #{subtitle,jdbcType=VARCHAR},
-      pic = #{pic,jdbcType=VARCHAR},
       ptime = #{ptime,jdbcType=TIMESTAMP},
+      pic = #{pic,jdbcType=VARCHAR},
       stage = #{stage,jdbcType=INTEGER},
       describle = #{describle,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="jx.tour.pojo.Ads" >
-    update ads
+  <update id="updateByPrimaryKey" parameterType="jx.tour.pojo.Information" >
+    update information
     set title = #{title,jdbcType=VARCHAR},
-      subTitle = #{subtitle,jdbcType=VARCHAR},
-      pic = #{pic,jdbcType=VARCHAR},
       ptime = #{ptime,jdbcType=TIMESTAMP},
+      pic = #{pic,jdbcType=VARCHAR},
       stage = #{stage,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>

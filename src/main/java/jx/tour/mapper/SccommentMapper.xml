@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="jx.tour.mapper.AdsMapper" >
-  <resultMap id="BaseResultMap" type="jx.tour.pojo.Ads" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="title" property="title" jdbcType="VARCHAR" />
-    <result column="subTitle" property="subtitle" jdbcType="VARCHAR" />
-    <result column="pic" property="pic" jdbcType="VARCHAR" />
+<mapper namespace="jx.tour.mapper.SccommentMapper" >
+  <resultMap id="BaseResultMap" type="jx.tour.pojo.Sccomment" >
+    <id column="cid" property="cid" jdbcType="INTEGER" />
+    <result column="userNum" property="usernum" jdbcType="INTEGER" />
+    <result column="secenyNum" property="secenynum" jdbcType="INTEGER" />
     <result column="ptime" property="ptime" jdbcType="TIMESTAMP" />
     <result column="stage" property="stage" jdbcType="INTEGER" />
   </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="jx.tour.pojo.Ads" extends="BaseResultMap" >
-    <result column="describle" property="describle" jdbcType="LONGVARCHAR" />
+  <resultMap id="ResultMapWithBLOBs" type="jx.tour.pojo.Sccomment" extends="BaseResultMap" >
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -71,12 +70,12 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, title, subTitle, pic, ptime, stage
+    cid, userNum, secenyNum, ptime, stage
   </sql>
   <sql id="Blob_Column_List" >
-    describle
+    content
   </sql>
-  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="jx.tour.pojo.AdsExample" >
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="jx.tour.pojo.SccommentExample" >
     select
     <if test="distinct" >
       distinct
@@ -84,7 +83,7 @@
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
-    from ads
+    from sccomment
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -92,13 +91,13 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="jx.tour.pojo.AdsExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="jx.tour.pojo.SccommentExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from ads
+    from sccomment
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -111,41 +110,38 @@
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
-    from ads
-    where id = #{id,jdbcType=INTEGER}
+    from sccomment
+    where cid = #{cid,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from ads
-    where id = #{id,jdbcType=INTEGER}
+    delete from sccomment
+    where cid = #{cid,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="jx.tour.pojo.AdsExample" >
-    delete from ads
+  <delete id="deleteByExample" parameterType="jx.tour.pojo.SccommentExample" >
+    delete from sccomment
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="jx.tour.pojo.Ads" >
-    insert into ads (id, title, subTitle, 
-      pic, ptime, stage, 
-      describle)
-    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{subtitle,jdbcType=VARCHAR}, 
-      #{pic,jdbcType=VARCHAR}, #{ptime,jdbcType=TIMESTAMP}, #{stage,jdbcType=INTEGER}, 
-      #{describle,jdbcType=LONGVARCHAR})
+  <insert id="insert" parameterType="jx.tour.pojo.Sccomment" >
+    insert into sccomment (cid, userNum, secenyNum, 
+      ptime, stage, content
+      )
+    values (#{cid,jdbcType=INTEGER}, #{usernum,jdbcType=INTEGER}, #{secenynum,jdbcType=INTEGER}, 
+      #{ptime,jdbcType=TIMESTAMP}, #{stage,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="jx.tour.pojo.Ads" >
-    insert into ads
+  <insert id="insertSelective" parameterType="jx.tour.pojo.Sccomment" >
+    insert into sccomment
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
+      <if test="cid != null" >
+        cid,
       </if>
-      <if test="title != null" >
-        title,
+      <if test="usernum != null" >
+        userNum,
       </if>
-      <if test="subtitle != null" >
-        subTitle,
-      </if>
-      <if test="pic != null" >
-        pic,
+      <if test="secenynum != null" >
+        secenyNum,
       </if>
       <if test="ptime != null" >
         ptime,
@@ -153,22 +149,19 @@
       <if test="stage != null" >
         stage,
       </if>
-      <if test="describle != null" >
-        describle,
+      <if test="content != null" >
+        content,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
+      <if test="cid != null" >
+        #{cid,jdbcType=INTEGER},
       </if>
-      <if test="title != null" >
-        #{title,jdbcType=VARCHAR},
+      <if test="usernum != null" >
+        #{usernum,jdbcType=INTEGER},
       </if>
-      <if test="subtitle != null" >
-        #{subtitle,jdbcType=VARCHAR},
-      </if>
-      <if test="pic != null" >
-        #{pic,jdbcType=VARCHAR},
+      <if test="secenynum != null" >
+        #{secenynum,jdbcType=INTEGER},
       </if>
       <if test="ptime != null" >
         #{ptime,jdbcType=TIMESTAMP},
@@ -176,31 +169,28 @@
       <if test="stage != null" >
         #{stage,jdbcType=INTEGER},
       </if>
-      <if test="describle != null" >
-        #{describle,jdbcType=LONGVARCHAR},
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="jx.tour.pojo.AdsExample" resultType="java.lang.Integer" >
-    select count(*) from ads
+  <select id="countByExample" parameterType="jx.tour.pojo.SccommentExample" resultType="java.lang.Integer" >
+    select count(*) from sccomment
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update ads
+    update sccomment
     <set >
-      <if test="record.id != null" >
-        id = #{record.id,jdbcType=INTEGER},
+      <if test="record.cid != null" >
+        cid = #{record.cid,jdbcType=INTEGER},
       </if>
-      <if test="record.title != null" >
-        title = #{record.title,jdbcType=VARCHAR},
+      <if test="record.usernum != null" >
+        userNum = #{record.usernum,jdbcType=INTEGER},
       </if>
-      <if test="record.subtitle != null" >
-        subTitle = #{record.subtitle,jdbcType=VARCHAR},
-      </if>
-      <if test="record.pic != null" >
-        pic = #{record.pic,jdbcType=VARCHAR},
+      <if test="record.secenynum != null" >
+        secenyNum = #{record.secenynum,jdbcType=INTEGER},
       </if>
       <if test="record.ptime != null" >
         ptime = #{record.ptime,jdbcType=TIMESTAMP},
@@ -208,8 +198,8 @@
       <if test="record.stage != null" >
         stage = #{record.stage,jdbcType=INTEGER},
       </if>
-      <if test="record.describle != null" >
-        describle = #{record.describle,jdbcType=LONGVARCHAR},
+      <if test="record.content != null" >
+        content = #{record.content,jdbcType=LONGVARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -217,41 +207,36 @@
     </if>
   </update>
   <update id="updateByExampleWithBLOBs" parameterType="map" >
-    update ads
-    set id = #{record.id,jdbcType=INTEGER},
-      title = #{record.title,jdbcType=VARCHAR},
-      subTitle = #{record.subtitle,jdbcType=VARCHAR},
-      pic = #{record.pic,jdbcType=VARCHAR},
+    update sccomment
+    set cid = #{record.cid,jdbcType=INTEGER},
+      userNum = #{record.usernum,jdbcType=INTEGER},
+      secenyNum = #{record.secenynum,jdbcType=INTEGER},
       ptime = #{record.ptime,jdbcType=TIMESTAMP},
       stage = #{record.stage,jdbcType=INTEGER},
-      describle = #{record.describle,jdbcType=LONGVARCHAR}
+      content = #{record.content,jdbcType=LONGVARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update ads
-    set id = #{record.id,jdbcType=INTEGER},
-      title = #{record.title,jdbcType=VARCHAR},
-      subTitle = #{record.subtitle,jdbcType=VARCHAR},
-      pic = #{record.pic,jdbcType=VARCHAR},
+    update sccomment
+    set cid = #{record.cid,jdbcType=INTEGER},
+      userNum = #{record.usernum,jdbcType=INTEGER},
+      secenyNum = #{record.secenynum,jdbcType=INTEGER},
       ptime = #{record.ptime,jdbcType=TIMESTAMP},
       stage = #{record.stage,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="jx.tour.pojo.Ads" >
-    update ads
+  <update id="updateByPrimaryKeySelective" parameterType="jx.tour.pojo.Sccomment" >
+    update sccomment
     <set >
-      <if test="title != null" >
-        title = #{title,jdbcType=VARCHAR},
+      <if test="usernum != null" >
+        userNum = #{usernum,jdbcType=INTEGER},
       </if>
-      <if test="subtitle != null" >
-        subTitle = #{subtitle,jdbcType=VARCHAR},
-      </if>
-      <if test="pic != null" >
-        pic = #{pic,jdbcType=VARCHAR},
+      <if test="secenynum != null" >
+        secenyNum = #{secenynum,jdbcType=INTEGER},
       </if>
       <if test="ptime != null" >
         ptime = #{ptime,jdbcType=TIMESTAMP},
@@ -259,29 +244,27 @@
       <if test="stage != null" >
         stage = #{stage,jdbcType=INTEGER},
       </if>
-      <if test="describle != null" >
-        describle = #{describle,jdbcType=LONGVARCHAR},
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
       </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
+    where cid = #{cid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="jx.tour.pojo.Ads" >
-    update ads
-    set title = #{title,jdbcType=VARCHAR},
-      subTitle = #{subtitle,jdbcType=VARCHAR},
-      pic = #{pic,jdbcType=VARCHAR},
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="jx.tour.pojo.Sccomment" >
+    update sccomment
+    set userNum = #{usernum,jdbcType=INTEGER},
+      secenyNum = #{secenynum,jdbcType=INTEGER},
       ptime = #{ptime,jdbcType=TIMESTAMP},
       stage = #{stage,jdbcType=INTEGER},
-      describle = #{describle,jdbcType=LONGVARCHAR}
-    where id = #{id,jdbcType=INTEGER}
+      content = #{content,jdbcType=LONGVARCHAR}
+    where cid = #{cid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="jx.tour.pojo.Ads" >
-    update ads
-    set title = #{title,jdbcType=VARCHAR},
-      subTitle = #{subtitle,jdbcType=VARCHAR},
-      pic = #{pic,jdbcType=VARCHAR},
+  <update id="updateByPrimaryKey" parameterType="jx.tour.pojo.Sccomment" >
+    update sccomment
+    set userNum = #{usernum,jdbcType=INTEGER},
+      secenyNum = #{secenynum,jdbcType=INTEGER},
       ptime = #{ptime,jdbcType=TIMESTAMP},
       stage = #{stage,jdbcType=INTEGER}
-    where id = #{id,jdbcType=INTEGER}
+    where cid = #{cid,jdbcType=INTEGER}
   </update>
 </mapper>
