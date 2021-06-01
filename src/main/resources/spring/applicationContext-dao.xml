@@ -62,4 +62,5 @@
         <property name="basePackage" value="jx.tour.mapper"/>
     </bean>
 
+    <bean class="jx.tour.utils.PageUtils" id="pageUtils" />
 </beans>
