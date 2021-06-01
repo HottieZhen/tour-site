@@ -34,7 +34,7 @@
     </tx:advice>
     <!-- aop -->
     <aop:config>
-        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.edu.hzw.service.impl.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* jx.tour.service.impl.*.*(..))"/>
     </aop:config>
 
 </beans>
