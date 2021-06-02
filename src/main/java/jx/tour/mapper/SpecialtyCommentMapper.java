@@ -4,6 +4,7 @@ import jx.tour.pojo.ScenicComment;
 import jx.tour.pojo.Search;
 import jx.tour.pojo.Specialty;
 import jx.tour.pojo.SpecialtycommentVo;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,8 +18,12 @@ public interface SpecialtyCommentMapper {
 	
 	//随机显示3个特产信息
 	public List<Specialty> getSpecialty();
+
+	//首页特产信息
+	public List<Specialty> getIndexSpecialty();
+
 	//随机显示除此特产以外的当地其他6个特产
-	public List<Specialty> getOtherSpecialty(int tnum,int id);
+	public List<Specialty> getOtherSpecialty(@Param("tnum") int tnum, @Param("id") int id);
 	
 	
 	/*后台*/

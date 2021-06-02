@@ -52,7 +52,7 @@
 					</div>
 					<!------------------列表分类-------------------->
 					<div id="list_sort">
-						<p>江西风景独好</p>
+						<p>浙江风景独好</p>
 					</div>
 					<!------------------景区列表-------------------->
 					<div id="scenic_list">
@@ -60,7 +60,7 @@
 						<c:forEach items="${pageInfo.list}" var="sc">  
                              <li>
 								<div class="pic">
-									<a href="${pageContext.request.contextPath}/scenic/getScenic?id=${sc.scenicid}&scenicnum=${sc.scenicnum}"><img class="scale-effect" src="/pic/${sc.pic1}"/></a>
+									<a href="${pageContext.request.contextPath}/scenic/getScenic?id=${sc.scenicid}&scenicnum=${sc.scenicnum}"><img class="scale-effect" src="/images/scenic/${sc.pic1}"/></a>
 								</div>
 								<div class="con">
 									<h3>

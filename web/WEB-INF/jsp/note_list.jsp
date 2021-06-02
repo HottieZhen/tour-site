@@ -47,10 +47,10 @@
 									<div class="cover">
 										<a
 											href="${pageContext.request.contextPath}/travel/travelArticle?id=${travel.id}"><img
-											class="scale-effect " src="/pic/${travel.pic1}" />"/></a>
+											class="scale-effect " src="/images/travel/${travel.pic1}" />"/></a>
 									</div>
 									<div class="head">
-										<img src="/pic/${travel.userimag}" />
+										<img src="/images/user/${travel.userimag}" />
 									</div>
 								</div>
 								<div class="meta">

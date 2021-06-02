@@ -60,7 +60,7 @@
 						<c:forEach items="${pageInfo.list}" var="hotel">  
                              <li>
 								<div class="pic">
-									<a href="${pageContext.request.contextPath}/hotel/getHotel?hnum=${hotel.hnum}&hid=${hotel.hid}"><img class="scale-effect" src="/pic/${hotel.pic}"/></a>
+									<a href="${pageContext.request.contextPath}/hotel/getHotel?hnum=${hotel.hnum}&hid=${hotel.hid}"><img class="scale-effect" src="/images/hotel/${hotel.pic}"/></a>
 								</div>
 								<div class="con">
 									<h3>

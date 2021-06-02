@@ -9,9 +9,9 @@
 <body>
 <!-----------------版底---------------->
 <div id="footer">
-	<p>江西文化旅游发展有限公司 版权所有</p>
-	<p>Copyright 2018 tour.jxcn.cn All Rights Reserved |
-					赣ICP备10000000号 技术支持：南昌航空大学软件学院</p>
+	<p>浙江文化旅游发展有限公司 版权所有</p>
+	<p>Copyright 2021 www.lvxingzj.cn All Rights Reserved |
+					浙ICP备10000000号 技术支持：宁波大学科学技术学院</p>
 </div>
 </body>
 </html>

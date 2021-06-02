@@ -12,7 +12,7 @@
 	<div id="toolbar">
 		<div class="cw1200">
 			<ul class="fl">
-				<li class="tb"><p>您好，欢迎访问江西文化旅游网！</p></li>
+				<li class="tb"><p>您好，欢迎访问浙江文化旅游网！</p></li>
 				<c:if test="${empty sessionScope.user}">
 					<li class="tb"><a
 						href="${pageContext.request.contextPath}/check/toLogin">登录</a><span>|</span></li>
@@ -89,9 +89,9 @@
 				<div class="nav">
 					<ul>
 						<li><a title="" class="cur" href="${pageContext.request.contextPath}/">首页</a></li>
-						<li><a class="tta" title="" href="${pageContext.request.contextPath}/scenic/getSomeScenic">醉美江西</a></li>
+						<li><a class="tta" title="" href="${pageContext.request.contextPath}/scenic/getSomeScenic">醉美浙江</a></li>
 						<li><a title="" href="${pageContext.request.contextPath}/specialty/getAllSpecialty">特产商城</a></li>
-						<li><a title="" href="${pageContext.request.contextPath}/travel/getAlltravels">大话江西</a></li>
+						<li><a title="" href="${pageContext.request.contextPath}/travel/getAlltravels">大话浙江</a></li>
 						<li><a title="" href="${pageContext.request.contextPath}/information/getALLInformations">新闻资讯</a></li>
 					</ul>
 				</div>

@@ -54,14 +54,14 @@
 					<!-----------------主图---------------->
 					<div class="preview">
 						<div id="vertical" class="bigImg">
-							<img src="/pic/${specialty.tpic}" id="midimg" />
+							<img src="/images/techan/${specialty.tpic}" id="midimg" />
 							<div style="display: none;" id="winSelector"></div>
 						</div>
 						<div id="imageMenu">
 							<ul>
-								<li id="onlickImg"><img src="/pic/${specialty.tpic}" /></li>
-								<li><img src="/pic/${specialty.pic2}" /></li>
-								<li><img src="/pic/${specialty.pic3}" /></li>
+								<li id="onlickImg"><img src="/images/techan/${specialty.tpic}" /></li>
+								<li><img src="/images/techan/${specialty.pic2}" /></li>
+								<li><img src="/images/techan/${specialty.pic3}" /></li>
 							</ul>
 						</div>
 						<div id="bigView" style="display: none;">
@@ -164,12 +164,12 @@
 					<div id="project_details">
 						${specialty.tdescrible}
 						<ul>
-							<li><img src="/pic/${specialty.tpic}" /></li>
+							<li><img src="/images/techan/${specialty.tpic}" /></li>
 							<br />
 
-							<li><img src="/pic/${specialty.pic2}" /></li>
+							<li><img src="/images/techan/${specialty.pic2}" /></li>
 							<br />
-							<li><img src="/pic/${specialty.pic3}" /></li>
+							<li><img src="/images/techan/${specialty.pic3}" /></li>
 							<br />
 						</ul>
 					</div>

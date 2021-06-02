@@ -60,7 +60,7 @@
 						<c:forEach items="${pageInfo.list}" var="specialty" varStatus="id">
 								<li>
 									<div class="pic">
-										<a href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${specialty.tnum}&id=${specialty.id}"><img class="scale-effect" src="/pic/${specialty.tpic}" /></a>
+										<a href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${specialty.tnum}&id=${specialty.id}"><img class="scale-effect" src="/images/techan/${specialty.tpic}" /></a>
 									</div>
 									<div class="con">
 										<h3>
@@ -73,7 +73,6 @@
 										<p>
 											<span>价格：</span>￥<label>${specialty.tprice}</label>
 										</p>
-										<span>心动就把我吃掉！！</span>
 									</div>
 									<div class="other">
 										<!-- <span>76人付款</span><a href="project.html">132条评论</a> -->

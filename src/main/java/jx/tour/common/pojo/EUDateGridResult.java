@@ -21,5 +21,4 @@ public class EUDateGridResult {
 	public void setRows(List<?> rows) {
 		this.rows = rows;
 	}
-	
 }

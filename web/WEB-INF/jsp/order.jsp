@@ -39,7 +39,7 @@
 				</tr>
 				<tr>
 				    <td class="cwt">${order.orderId}</td>
-					<td><a href="#"><img class="pic" width=53 height=53 src="/pic/${order.tpic}" />${order.tname}</a></td>
+					<td><a href="#"><img class="pic" width=53 height=53 src="/image/techan/${order.tpic}" />${order.tname}</a></td>
 					<td class="cwt">￥${order.tprice}</td>
 					<td class="cwt">x${order.qty_item_1}</td>
 					<td class="cwt">￥${order.total}</td>

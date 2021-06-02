@@ -46,7 +46,7 @@
 					<img src="images/lamp_ico.png" />
 				</div>
 				<div class="name">
-					玩在江西
+					玩在浙江
 				</div>
 				<div class="more">
 					<a href="${pageContext.request.contextPath}/scenic/getSomeScenic">更多>></a>
@@ -63,7 +63,7 @@
 				<c:forEach items="${scenics}" var="scenic" varStatus="id">
 					<li><a href="${pageContext.request.contextPath}/scenic/getScenic?id=${scenic.scenicid}&scenicnum=${scenic.scenicnum}">
 							<div class="pic">
-								<img class="scale-effect" src="/pic/${scenic.pic1}" />
+								<img class="scale-effect" src="/images/scenic/${scenic.pic1}" />
 							</div>
 							<p>${scenic.name}</p>
 					</a></li>
@@ -83,7 +83,7 @@
 					<img src="images/lamp_ico.png" />
 				</div>
 				<div class="name">
-					吃在江西
+					吃在浙江
 				</div>
 				<div class="more">
 					<a href="${pageContext.request.contextPath}/specialty/getAllSpecialty">更多>></a>
@@ -100,7 +100,7 @@
 				<c:forEach items="${specialties}" var="specialty" varStatus="id">
 					<li><a href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${specialty.tnum}&id=${specialty.id}">
 							<div class="pic">
-								<img class="scale-effect" src="/pic/${specialty.tpic}"/>
+								<img class="scale-effect" src="/images/techan/${specialty.tpic}"/>
 							</div>
 							<p>${specialty.tname}</p>
 					</a></li>
@@ -122,7 +122,7 @@
 					<img src="images/lamp_ico.png" />
 				</div>
 				<div class="name">
-					 住在江西
+					 住在浙江
 				</div>
 				<div class="more">
 					<a href="${pageContext.request.contextPath}/hotel/getAllHotel">更多>></a>
@@ -139,7 +139,7 @@
 				<c:forEach items="${hotels}" var="hotel" varStatus="id">
 					<li><a href="${pageContext.request.contextPath}/hotel/getHotel?hnum=${hotel.hnum}&hid=${hotel.hid}">
 							<div class="pic">
-								<img class="scale-effect" src="/pic/${hotel.pic}"/>
+								<img class="scale-effect" src="/images/hotel/${hotel.pic}"/>
 							</div>
 							<p>${hotel.hname}</p>
 					</a></li>

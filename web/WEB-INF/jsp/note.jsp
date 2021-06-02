@@ -42,7 +42,7 @@
 		<div class="user">
 			<div class="cw1200">
 				<div class="pic">
-					<img src="/pic/${travelsArticle.userimag}" />
+					<img src="/images/travel/${travelsArticle.userimag}" />
 				</div>
 				<div class="meta">
 					<label>作者：${travelsArticle.username}</label> <span>&nbsp;&nbsp;发布于：<fmt:formatDate
@@ -120,11 +120,11 @@
 
 						<div class="con">
 							<p>${travelsArticle.describle1}</p>
-							<img src="/pic/${travelsArticle.pic1}" />
+							<img src="/images/travel/${travelsArticle.pic1}" />
 							<p>${travelsArticle.describle2}</p>
-							<img src="/pic/${travelsArticle.pic2}" />
+							<img src="/images/travel/${travelsArticle.pic2}" />
 							<p>${travelsArticle.describle3}</p>
-							<img src="/pic/${travelsArticle.pic3}" />
+							<img src="/images/travel/${travelsArticle.pic3}" />
 						</div>
 					</div>
 
@@ -152,7 +152,7 @@
 					<div id="comment">
 						<c:if test="${not empty sessionScope.user}">
 							<div class="release">
-								<img src="/pic/${user.userimag}" />
+								<img src="/images/user/${user.userimag}" />
 								<!----------评论提交----------->
 								<form
 									action="${pageContext.request.contextPath}/travel/travelComment"
@@ -183,7 +183,7 @@
 									varStatus="id">
 									<li>
 										<div class="pic">
-											<img src="/pic/${comment.userimag}" />
+											<img src="/images/travel/${comment.userimag}" />
 										</div>
 										<div class="con">
 											<label>【用户名】${comment.username}</label>

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>江西旅游网</title>
+<title>浙江旅游网</title>
 <!-- Bootstrap -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <link href="css/bootstrap.min.css" rel="stylesheet">     
@@ -20,21 +20,21 @@
 
 </head>
 <body>
-	<!--选择江西的各大城市-->
+	<!--选择浙江的各大城市-->
 	<div id="ADV">
 		<h3>旅游城市</h3>
 		<ul>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1101"><p>南昌</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1102"><p>九江</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1103"><p>赣州</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1104"><p>上饶</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1105"><p>宜春</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1106"><p>吉安</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1107"><p>抚州</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1108"><p>鹰潭</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1109"><p>萍乡</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1110"><p>新余</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1111"><p>景德镇</p></a></li>  
+			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1101"><p>杭州</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1102"><p>宁波</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1103"><p>温州</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1104"><p>嘉兴</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1105"><p>湖州</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1106"><p>绍兴</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1107"><p>金华</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1108"><p>衢州</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1109"><p>舟山</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1110"><p>台州</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1111"><p>丽水</p></a></li>
 			<li><a href="#"><p>更多...</p></a></li>
 		</ul>
 		<img src="images/tour/指示.png" id="point">
@@ -49,18 +49,17 @@
 					var html = '';
 					$.each(data, function(i, item) {
 						if(i==0)
-								html+='<div class="item active"><img src="/pic/'+item.pic+'"></div>'
-								else
-									html+='<div class="item"><img src="/pic/'+item.pic+'"></div>';    
+							html+='<div class="item active"><img src="/images/'+item.pic+'"></div>'
+						else
+							html+='<div class="item"><img src="/images/'+item.pic+'"></div>';
 					});
-					$('.carousel-inner').html(html);  
-					
+					$('.carousel-inner').html(html);
 				}
 
 			});
 		}); 
 		
-	//江西美景
+	//浙江美景
 		  $(function() {
 			$.ajax({
 				type : 'post',
@@ -73,15 +72,15 @@
 					var html2 = '';
 					$.each(data, function(i, item) {
 						if(i<5){
-							html1+='<li><a href="${pageContext.request.contextPath}/scenic/getIndexScenic?id='+item.contentid+'"><span>'+item.title+'</span><img class="scale-effect" src=/pic/'+item.pic+' /></a></li>'
+							html1+='<li><a href="${pageContext.request.contextPath}/scenic/getIndexScenic?id='+item.scenicid+'"><span>'+item.name+'</span><img class="scale-effect" src=/images/scenic/'+item.pic1+' /></a></li>'
 						}
 						 else{
-							 html2+='<li><a href="${pageContext.request.contextPath}/scenic/getIndexScenic?id='+item.contentid+'"><span>'+item.title+'</span><img class="scale-effect" src=/pic/'+item.pic+' /></a></li>'
+							 html2+='<li><a href="${pageContext.request.contextPath}/scenic/getIndexScenic?id='+item.scenicid+'"><span>'+item.name+'</span><img class="scale-effect" src=/images/scenic/'+item.pic1+' /></a></li>'
 						}
-						if(i==9){
+						// if(i==9){
 							$('.scerney1').html(html1);
 							$('.scerney2').html(html2);
-						}
+						// }
 									
 					});
 				}
@@ -89,7 +88,7 @@
 			});
 		});
 	
-		  //江西特产 
+		  //浙江特产
 			$(function() {
 				$.ajax({
 					type : 'post',
@@ -101,7 +100,7 @@
 					success : function(data) {//返回json结果 
 						var html = '';
 						$.each(data, function(i,item) {
-									html+='<li><a  href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum='+item.areanum+'&id='+item.contentid+'"> <img title="" class="scale-effect" src=/pic/'+item.pic+' /><p>'+item.title+'</p></a></li>'
+									html+='<li><a  href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum='+item.tnum+'&id='+item.id+'"> <img title="" class="scale-effect" src=/images/techan/'+item.tpic+' /><p>'+item.tname+'</p></a></li>'
 						});
 						
 						$('.fc').html(html);
@@ -111,7 +110,7 @@
 				});
 			});
 		  
-			//大话江西
+			//大话浙江
 			$(function() {
 				$.ajax({
 					type : 'post',
@@ -173,6 +172,9 @@
 						    html2+='<li><a title="" href="${pageContext.request.contextPath}/information/getALLInformations">更多</a><li>'
 							$('.a_new').html(html1);
 							$('.list').html(html2);
+						
+						
+						
 					}
 
 				});
@@ -183,9 +185,8 @@
 	<%@ include file="/WEB-INF/jsp/commons/head.jsp"%>
 	<!------------------banner-------------------->
 	<script src="js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
-	</script>
-	<!-- 轮播图 -->
-		<div id="myCarousel" class="carousel slide">
+
+	<div id="myCarousel" class="carousel slide">
 			<!-- 轮播（Carousel）指标 -->
 			<ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -193,7 +194,7 @@
 				<li data-target="#myCarousel" data-slide-to="2"></li>
 			</ol>
 			<!-- 轮播（Carousel）项目 -->
-			<div class="carousel-inner">
+			<div class="carousel-inner" style="height: 200px;overflow:hidden;">
 			     <!--  添加图片信息  -->
 			</div>
 			<!-- 轮播（Carousel）导航 -->
@@ -207,7 +208,7 @@
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
-<!------------------江西美景-------------------->
+<!------------------浙江美景-------------------->
 	<div id="h_scenic">
 		<div class="cw1200">
 			<div class="title">
@@ -240,7 +241,7 @@
 			</div>
 		</div>
 	</div>
-	<!------------------江西特产-------------------->
+	<!------------------浙江特产-------------------->
 	<div id="h_project">
 		<div class="cw1200">
 			<div class="title">
@@ -253,7 +254,7 @@
 			</div>
 		</div>
 	</div>
-	<!------------------大话江西-------------------->
+	<!------------------大话浙江-------------------->
 	<div id="h_note">
 		<div class="cw1200">
 			<div class="title">

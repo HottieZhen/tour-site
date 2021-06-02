@@ -32,7 +32,7 @@
 	<!--引入页面头部head.html-->
 	<%@ include file="/WEB-INF/jsp/commons/head.jsp"%>
 	<!------------------景区版头-------------------->
-	<div id="scenic_head" style="background:url(/pic/${scenic.pic1}) no-repeat center;background-size:100%;"> 
+	<div id="scenic_head" style="background:url(/images/scenic/${scenic.pic1}) no-repeat center;background-size:100%;">
 		<div class="cw1200">
 			<div class="title">
 				<p>${scenic.name}</p>  
@@ -45,19 +45,19 @@
 				data-am-gallery="{ pureview: true }">
 				<li>
 					<div class="am-gallery-item">
-					<a href="#" class=""> <img src="/pic/${scenic.pic1}" alt="[${scenic.name}]:人生就像一场旅行，不必在乎目的地，在乎的是沿途的风景以及看风景的心情，让心灵去旅行!" /></a>
+					<a href="#" class=""> <img src="/images/scenic/${scenic.pic1}" alt="[${scenic.name}]:人生就像一场旅行，不必在乎目的地，在乎的是沿途的风景以及看风景的心情，让心灵去旅行!" /></a>
 					</div>
 				</li>
 				
 			<li>
-					<div class="am-gallery-item"><a href="#" class=""> <img src="/pic/${scenic.pic2}" alt="[${scenic.name}]:有的事情现在不做，就一辈子也不会做了!某天也许会相遇在这个好地方!" />
+					<div class="am-gallery-item"><a href="#" class=""> <img src="/images/scenic/${scenic.pic2}" alt="[${scenic.name}]:有的事情现在不做，就一辈子也不会做了!某天也许会相遇在这个好地方!" />
 						</a>
 					</div>
 				</li>
 				
 				<li>
 					<div class="am-gallery-item">
-						<a href="#"class=""> <img src="/pic/${scenic.pic3}" alt="[${scenic.name}]:一个背包，几本书，所有喜欢的歌，一张单程车票，一颗潇洒的心!" />
+						<a href="#"class=""> <img src="/images/scenic/${scenic.pic3}" alt="[${scenic.name}]:一个背包，几本书，所有喜欢的歌，一张单程车票，一颗潇洒的心!" />
 						</a>
 					</div>
 				</li>
@@ -132,7 +132,7 @@
 					<div id="comment">
 						<c:if test="${not empty sessionScope.user}">
 							<div class="release">
-								<img src="/pic/${user.userimag}" /> 
+								<img src="/images/user/${user.userimag}" />
 								
 								<!----------评论提交----------->   
 								 <form action="${pageContext.request.contextPath}/scenic/scenicComment" method="post">
@@ -163,7 +163,7 @@
 
 									<li>
 										<div class="pic">
-											<img src="/pic/${comment.userimag}" />
+											<img src="/images/user/${comment.userimag}" />
 										</div>
 										<div class="con">
 											<label>【用户名】${comment.username}</label>
@@ -253,7 +253,7 @@
 								<li><a
 									href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${specialty.tnum}&id=${specialty.id}">
 										<div class="pic">
-											<img class="scale-effect" src="/pic/${specialty.tpic}" />
+											<img class="scale-effect" src="/images/techan/${specialty.tpic}" />
 										</div>
 										<p>${specialty.tname}</p>
 								</a></li>
@@ -287,7 +287,7 @@
 							<c:forEach items="${someHotelList}" var="hotel" varStatus="id">
 								<li><a href="${pageContext.request.contextPath}/hotel/getHotel?hnum=${hotel.hnum}&hid=${hotel.hid}">
 										<div class="pic">
-											<img class="scale-effect" src="/pic/${hotel.pic}" />
+											<img class="scale-effect" src="/images/hotel/${hotel.pic}" />
 										</div>
 										<p>${hotel.hname}</p>
 								</a></li>

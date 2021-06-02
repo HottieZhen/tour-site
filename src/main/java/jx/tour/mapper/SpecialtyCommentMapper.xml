@@ -7,8 +7,13 @@
     <select id="getSpecialty" parameterType="int" resultType="jx.tour.pojo.Specialty">
        select * from specialty ORDER BY RAND() LIMIT 3
     </select>
+
+    <select id="getIndexSpecialty" parameterType="int" resultType="jx.tour.pojo.Specialty">
+        select * from specialty ORDER BY RAND() LIMIT 5
+    </select>
+
       <select id="getOtherSpecialty" resultType="jx.tour.pojo.Specialty">
-       select * from specialty where specialty.tNum=#{0} and specialty.id not in (#{1}) ORDER BY RAND() LIMIT 6
+       select * from specialty where specialty.tNum=#{tnum} and specialty.id not in (#{id}) ORDER BY RAND() LIMIT 6
     </select>
     <select id="getSpecialtyByName" parameterType="jx.tour.pojo.Search" resultType="jx.tour.pojo.Specialty">
        select * from specialty where tname like '%${keyboard}%' and stage =1

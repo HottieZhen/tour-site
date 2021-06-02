@@ -7,6 +7,9 @@
     <select id="getScenic" resultType="jx.tour.pojo.Scenic">
        select * from scenic ORDER BY RAND() LIMIT 3  
   </select>
+    <select id="getIndexScenic" resultType="jx.tour.pojo.Scenic">
+        select * from scenic ORDER BY RAND() LIMIT 10
+    </select>
   <select id="getSomeScenic" resultType="jx.tour.pojo.Scenic">
        select * from scenic where stage = 1
   </select>

@@ -51,7 +51,7 @@
 				<!------------------酒店信息-------------------->
 				<div id="activity_enrolment">
 					<div class="pic">
-						<img src="/pic/${hotel.pic}" />
+						<img src="/images/${hotel.pic}" />
 					</div>
 					<div class="con">
 						<h2>${hotel.hname}</h2>
@@ -146,7 +146,7 @@
 													var time = new Date(comment.ptime) ;
 													commonTime = time.toLocaleString();
 													 html += '<li>'
-													 +'<div class="pic"><img src="/pic/'+comment.userimag+'" /></div>'
+													 +'<div class="pic"><img src="/images/'+comment.userimag+'" /></div>'
 													+'<div class="con">'
 														+'<label>【用户名】'+comment.username+'</label>'
 														+'<p>'+comment.content+'</p>'	  	
@@ -177,7 +177,7 @@
 
 										<li>
 											<div class="pic">
-												<img src="/pic/${comment.userimag}" />
+												<img src="/images/${comment.userimag}" />
 											</div>
 											<div class="con">
 												<label>【用户名】${comment.username}</label>
@@ -221,7 +221,7 @@
 									<li>
 										<div class="pic">
 											<a title="" href="${pageContext.request.contextPath}/hotel/getHotel?hnum=${comment.hnum}&hid=${comment.hid}"><img alt="" class="scale-effect"
-												src="/pic/${comment.pic}" /></a>
+												src="/images/${comment.pic}" /></a>
 										</div>
 										<div class="con">
 											<a href="#">${comment.hname}</a> <span><i
