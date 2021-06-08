@@ -49,9 +49,9 @@
 					var html = '';
 					$.each(data, function(i, item) {
 						if(i==0)
-							html+='<div class="item active"><img src="/images/'+item.pic+'"></div>'
+							html+='<div class="item active"><img src="/images/ads/'+item.pic+'"></div>'
 						else
-							html+='<div class="item"><img src="/images/'+item.pic+'"></div>';
+							html+='<div class="item"><img src="/images/ads/'+item.pic+'"></div>';
 					});
 					$('.carousel-inner').html(html);
 				}

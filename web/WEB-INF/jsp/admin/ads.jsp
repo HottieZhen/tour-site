@@ -68,7 +68,7 @@
 								<td>${item.subtitle}</td>
 								<td><div style="width: 50px; heigth: 50px;" class="pdiv">
 										<img style="width: 100%; heigth: 100%;" class="pic"
-											src="/pic/${item.pic}" />
+											src="/images/ads/${item.pic}" />
 									</div></td>
 								<td><font color="blue"><fmt:formatDate value="${item.ptime}" pattern="yyyy-MM-dd HH:mm:ss" /></font></td>
 								<td><c:if test="${item.stage eq 0}">
