@@ -2,6 +2,7 @@ package jx.tour.service.impl;
 
 import jx.tour.pojo.Content;
 import jx.tour.service.UploadFileService;
+import org.junit.Test;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -24,11 +25,12 @@ public class UploadFileServiceImp implements UploadFileService {
                     String originalFileName = file.getOriginalFilename();
                     //新文件名
                     String newFileName = UUID.randomUUID() + originalFileName.substring(originalFileName.lastIndexOf("."));
-                    String save = "travel/"+newFileName;
+                    String save = newFileName;
                     picPath.add(save);
                     //获得物理路径webapp所在路径，即新文件将要保存的路径
 //                    String pathRoot = "E:/upload/temp/"+"travel/";
-                    String pathRoot = "E:/upload/temp/"+"travel/";
+
+                    String pathRoot = this.getClass().getResource("/").getPath()+"../../images/travel/";
                     //新图片
                     File newFile = new File(pathRoot+newFileName);
                     //将内存的图片数据写入磁盘
