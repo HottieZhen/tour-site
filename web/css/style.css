@@ -58,6 +58,9 @@ body {
 	float: left;
 }
 
+#myCarousel img{
+	width: 100%;
+}
 /*--------------选择浙江城市-----------------*/
 #ADV {
 	width: 325px;

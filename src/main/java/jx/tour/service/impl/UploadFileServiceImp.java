@@ -78,9 +78,9 @@ public class UploadFileServiceImp implements UploadFileService {
                     //获得物理路径webapp所在路径，即新文件将要保存的路径
                     String pathRoot = this.getClass().getResource("/").getPath()+"../../images/scenic/";
                     //新图片
-                    File newFile = new File(pathRoot);
+                    File newFile = new File(pathRoot+newFileName);
                     //将内存的图片数据写入磁盘
-                    file.transferTo(newFile);  
+                    file.transferTo(newFile);
 
                 }
             }
@@ -133,7 +133,7 @@ public class UploadFileServiceImp implements UploadFileService {
                     //获得物理路径,即新文件将要保存的路径
                     String pathRoot = this.getClass().getResource("/").getPath()+"../../images/hotel/";
                     //新图片
-                    File newFile = new File(pathRoot);
+                    File newFile = new File(pathRoot+newFileName);
                     //将内存的图片数据写入磁盘
                     file.transferTo(newFile);  
 
@@ -153,7 +153,7 @@ public class UploadFileServiceImp implements UploadFileService {
         //获得物理路径,即新文件将要保存的路径
         String pathRoot = this.getClass().getResource("/").getPath()+"../../images/ads/";
         //新图片
-        File newFile = new File(pathRoot);
+        File newFile = new File(pathRoot+newFileName);
         //将内存的图片数据写入磁盘
         file.transferTo(newFile);  
 		return save;
@@ -169,7 +169,7 @@ public class UploadFileServiceImp implements UploadFileService {
         //获得物理路径,即新文件将要保存的路径
         String pathRoot = this.getClass().getResource("/").getPath()+"../../images/information/";
         //新图片
-        File newFile = new File(pathRoot);
+        File newFile = new File(pathRoot+newFileName);
         //将内存的图片数据写入磁盘
         file.transferTo(newFile);  
 		return save;

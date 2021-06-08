@@ -163,17 +163,17 @@
 									<label class="col-sm-2 control-label">酒店城市</label>
 									<div class="col-sm-4">
 										<select name="hnum" id="hnum">
-										<option value="1101">南昌</option>
-										<option value="1102">九江</option>
-										<option value="1103">赣州</option>
-										<option value="1104">上饶</option>
-										<option value="1105">宜春</option>
-										<option value="1106">吉安</option>
-										<option value="1107">抚州</option>
-										<option value="1108">鹰潭</option>
-										<option value="1109">萍乡</option>
-										<option value="1110">新余</option>
-										<option value="1111">景德镇</option>
+											<option value="1101">杭州</option>
+											<option value="1102">宁波</option>
+											<option value="1103">温州</option>
+											<option value="1104">嘉兴</option>
+											<option value="1105">湖州</option>
+											<option value="1106">绍兴</option>
+											<option value="1107">金华</option>
+											<option value="1108">衢州</option>
+											<option value="1109">舟山</option>
+											<option value="1110">台州</option>
+											<option value="1111">丽水</option>
 									</select>  
 									</div>
 								</div>
@@ -285,17 +285,17 @@
 									<label class="col-sm-2 control-label">酒店城市</label>
 									<div class="col-sm-4">
 										<select name="hnum" id="hnum">
-										<option value="1101">南昌</option>
-										<option value="1102">九江</option>
-										<option value="1103">赣州</option>
-										<option value="1104">上饶</option>
-										<option value="1105">宜春</option>
-										<option value="1106">吉安</option>
-										<option value="1107">抚州</option>
-										<option value="1108">鹰潭</option>
-										<option value="1109">萍乡</option>
-										<option value="1110">新余</option>
-										<option value="1111">景德镇</option>
+											<option value="1101">杭州</option>
+											<option value="1102">宁波</option>
+											<option value="1103">温州</option>
+											<option value="1104">嘉兴</option>
+											<option value="1105">湖州</option>
+											<option value="1106">绍兴</option>
+											<option value="1107">金华</option>
+											<option value="1108">衢州</option>
+											<option value="1109">舟山</option>
+											<option value="1110">台州</option>
+											<option value="1111">丽水</option>
 									</select>  
 									</div>
 								</div>

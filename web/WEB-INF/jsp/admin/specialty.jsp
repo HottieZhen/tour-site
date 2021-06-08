@@ -87,8 +87,8 @@
 								<td style="display: none">${item.tdescrible}</td>
 								<td style="display: none">${item.tpic}</td>
 								<td style="width: 250px;">
-								<button type="button" class="btn btn-info" data-toggle="modal"
-										data-target="#pSpecialty" name="publish">发布</button>
+<%--								<button type="button" class="btn btn-info" data-toggle="modal"--%>
+<%--										data-target="#pSpecialty" name="publish">发布</button>--%>
 									<button type="button" class="btn btn-info" data-toggle="modal"
 										data-target="#myModal" name="edit">修改</button> <a
 									href="${pageContext.request.contextPath}/backSpecialty/downSpecialty?id=${item.id}"><button
@@ -174,17 +174,17 @@
 
 								<div class="col-sm-7">
 									<select name="tnum" id="tnum">
-										<option value="1101">南昌</option>
-										<option value="1102">九江</option>
-										<option value="1103">赣州</option>
-										<option value="1104">上饶</option>
-										<option value="1105">宜春</option>
-										<option value="1106">吉安</option>
-										<option value="1107">抚州</option>
-										<option value="1108">鹰潭</option>
-										<option value="1109">萍乡</option>
-										<option value="1110">新余</option>
-										<option value="1111">景德镇</option>
+										<option value="1101">杭州</option>
+										<option value="1102">宁波</option>
+										<option value="1103">温州</option>
+										<option value="1104">嘉兴</option>
+										<option value="1105">湖州</option>
+										<option value="1106">绍兴</option>
+										<option value="1107">金华</option>
+										<option value="1108">衢州</option>
+										<option value="1109">舟山</option>
+										<option value="1110">台州</option>
+										<option value="1111">丽水</option>
 									</select>
 								</div>
 
@@ -322,17 +322,17 @@
 
 								<div class="col-sm-7">
 									<select name="tnum" id="tnum">
-										<option value="1101">南昌</option>
-										<option value="1102">九江</option>
-										<option value="1103">赣州</option>
-										<option value="1104">上饶</option>
-										<option value="1105">宜春</option>
-										<option value="1106">吉安</option>
-										<option value="1107">抚州</option>
-										<option value="1108">鹰潭</option>
-										<option value="1109">萍乡</option>
-										<option value="1110">新余</option>
-										<option value="1111">景德镇</option>
+										<option value="1101">杭州</option>
+										<option value="1102">宁波</option>
+										<option value="1103">温州</option>
+										<option value="1104">嘉兴</option>
+										<option value="1105">湖州</option>
+										<option value="1106">绍兴</option>
+										<option value="1107">金华</option>
+										<option value="1108">衢州</option>
+										<option value="1109">舟山</option>
+										<option value="1110">台州</option>
+										<option value="1111">丽水</option>
 									</select>
 								</div>
 
@@ -420,88 +420,88 @@
 	</div>
 
 <div>
-<!-- 模态框 （Modal）发布特产信息到前台首页 -->
-<div class="modal fade" id="pSpecialty" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" style="width: 800px;">
-        <div class="modal-content">
-            <div class="modal-header">
-                 
-                <h4 class="modal-title" id="myModalLabel">发布特产信息</h4>
-            </div>
-            
-            <!--   添加主体 开始--> 
-            <div class="modal-body" style="top:15px;">    
-               <form name="publishForm" class="form-horizontal" role="form"
-							action="${pageContext.request.contextPath}/backSpecialty/publishSpecialty.action"  
-							method="post" enctype="multipart/form-data">
-							<!-- 模态框左侧部分 -->   
-							<input type="hidden" name="contentid" id="contentid" />
-							<input type="hidden" name="pic" id="pic" />
-								<div class="form-group">
-									<label for="firstname" class="col-sm-2 control-label">标题</label>
-									<div class="col-sm-7">
-										<input type="text" value="" class="form-control" id="title"
-											name="title">
-									</div>
-								</div>
-									<div class="form-group">
-									<label for="lastname" class="col-sm-2 control-label">区域</label>
+<%--<!-- 模态框 （Modal）发布特产信息到前台首页 -->--%>
+<%--<div class="modal fade" id="pSpecialty" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">--%>
+<%--    <div class="modal-dialog" style="width: 800px;">--%>
+<%--        <div class="modal-content">--%>
+<%--            <div class="modal-header">--%>
+<%--                 --%>
+<%--                <h4 class="modal-title" id="myModalLabel">发布特产信息</h4>--%>
+<%--            </div>--%>
+<%--            --%>
+<%--            <!--   添加主体 开始--> --%>
+<%--            <div class="modal-body" style="top:15px;">    --%>
+<%--               <form name="publishForm" class="form-horizontal" role="form"--%>
+<%--							action="${pageContext.request.contextPath}/backSpecialty/publishSpecialty.action"  --%>
+<%--							method="post" enctype="multipart/form-data">--%>
+<%--							<!-- 模态框左侧部分 -->   --%>
+<%--							<input type="hidden" name="contentid" id="contentid" />--%>
+<%--							<input type="hidden" name="pic" id="pic" />--%>
+<%--								<div class="form-group">--%>
+<%--									<label for="firstname" class="col-sm-2 control-label">标题</label>--%>
+<%--									<div class="col-sm-7">--%>
+<%--										<input type="text" value="" class="form-control" id="title"--%>
+<%--											name="title">--%>
+<%--									</div>--%>
+<%--								</div>--%>
+<%--									<div class="form-group">--%>
+<%--									<label for="lastname" class="col-sm-2 control-label">区域</label>--%>
 
-									<div class="col-sm-7">
-										<select name="areanum" id="areanum">
-											<option value="1101">南昌</option>
-											<option value="1102">九江</option>
-											<option value="1103">赣州</option>
-											<option value="1104">上饶</option>
-											<option value="1105">宜春</option>
-											<option value="1106">吉安</option>
-											<option value="1107">抚州</option>
-											<option value="1108">鹰潭</option>
-											<option value="1109">萍乡</option>
-											<option value="1110">新余</option>
-											<option value="1111">景德镇</option>
-										</select>
-									</div>
+<%--									<div class="col-sm-7">--%>
+<%--										<select name="areanum" id="areanum">--%>
+<%--											<option value="1101">杭州</option>--%>
+<%--											<option value="1102">宁波</option>--%>
+<%--											<option value="1103">温州</option>--%>
+<%--											<option value="1104">嘉兴</option>--%>
+<%--											<option value="1105">湖州</option>--%>
+<%--											<option value="1106">绍兴</option>--%>
+<%--											<option value="1107">金华</option>--%>
+<%--											<option value="1108">衢州</option>--%>
+<%--											<option value="1109">舟山</option>--%>
+<%--											<option value="1110">台州</option>--%>
+<%--											<option value="1111">丽水</option>--%>
+<%--										</select>--%>
+<%--									</div>--%>
 
-								</div>
-								
-								
-	
-							<div class="form-group">
-								<label class="col-sm-2 control-label">资讯状态</label>
-								<div class="col-sm-4">
-									<select name="stage" id="stage">
-										<option value="1">上架</option>
-										<option value="0">下架</option>
+<%--								</div>--%>
+<%--								--%>
+<%--								--%>
+<%--	--%>
+<%--							<div class="form-group">--%>
+<%--								<label class="col-sm-2 control-label">资讯状态</label>--%>
+<%--								<div class="col-sm-4">--%>
+<%--									<select name="stage" id="stage">--%>
+<%--										<option value="1">上架</option>--%>
+<%--										<option value="0">下架</option>--%>
 
-									</select>
-								</div>
-							</div>
-								<div class="form-group">
-									<label for="pic1" class="col-sm-2 control-label">图片</label>
-									 
-									<div style="float: left; width: 150px; heigth: 150px;">
-										<img id="pic" style="width: 100%; heigth: 100%;" class="pic"
-											src="" />
-									</div>
-								</div>
-								 
-						</form>
-            </div>
-            <!--   添加主体结束 -->
-             
-             
-             <!--    开始按钮 -->
-            <div class="modal-footer"  style="text-align: center" style="height:50px">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-				<button onclick="publishForm.submit();" type="button"class="btn btn-primary">特产发布</button>  
-            </div>
-            <!--    结束按钮 -->  
-            
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal -->
-    </div>
-    </div>
+<%--									</select>--%>
+<%--								</div>--%>
+<%--							</div>--%>
+<%--								<div class="form-group">--%>
+<%--									<label for="pic1" class="col-sm-2 control-label">图片</label>--%>
+<%--									 --%>
+<%--									<div style="float: left; width: 150px; heigth: 150px;">--%>
+<%--										<img id="pic" style="width: 100%; heigth: 100%;" class="pic"--%>
+<%--											src="" />--%>
+<%--									</div>--%>
+<%--								</div>--%>
+<%--								 --%>
+<%--						</form>--%>
+<%--            </div>--%>
+<%--            <!--   添加主体结束 -->--%>
+<%--             --%>
+<%--             --%>
+<%--             <!--    开始按钮 -->--%>
+<%--            <div class="modal-footer"  style="text-align: center" style="height:50px">--%>
+<%--                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>--%>
+<%--				<button onclick="publishForm.submit();" type="button"class="btn btn-primary">特产发布</button>  --%>
+<%--            </div>--%>
+<%--            <!--    结束按钮 -->  --%>
+<%--            --%>
+<%--        </div><!-- /.modal-content -->--%>
+<%--    </div><!-- /.modal -->--%>
+<%--    </div>--%>
+<%--    </div>--%>
 
 
 

@@ -194,7 +194,7 @@
 				<li data-target="#myCarousel" data-slide-to="2"></li>
 			</ol>
 			<!-- 轮播（Carousel）项目 -->
-			<div class="carousel-inner" style="height: 200px;overflow:hidden;">
+			<div class="carousel-inner" style="height: 400px;overflow:hidden;">
 			     <!--  添加图片信息  -->
 			</div>
 			<!-- 轮播（Carousel）导航 -->
