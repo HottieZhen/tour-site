@@ -50,9 +50,9 @@ public class UploadFileServiceImp implements UploadFileService {
              String originalFileName = file.getOriginalFilename();
              //新文件名
              String newFileName = UUID.randomUUID() + originalFileName.substring(originalFileName.lastIndexOf("."));
-             save = "user/"+newFileName;
+             save = newFileName;
              //获新文件将要保存的路物理径
-             String pathRoot = "E:/upload/temp/"+"user/";
+             String pathRoot = this.getClass().getResource("/").getPath()+"../../images/user/";
              //新图片
              File newFile = new File(pathRoot+newFileName);
              //将内存的图片数据写入磁盘
@@ -73,10 +73,10 @@ public class UploadFileServiceImp implements UploadFileService {
                     String originalFileName = file.getOriginalFilename();
                     //新文件名
                     String newFileName = UUID.randomUUID() + originalFileName.substring(originalFileName.lastIndexOf("."));
-                    String save = "area/"+scenicNum+"/scenic/"+newFileName;
+                    String save = newFileName;
                     picPath.add(save);  
                     //获得物理路径webapp所在路径，即新文件将要保存的路径
-                    String pathRoot = "E:/upload/temp/"+save;
+                    String pathRoot = this.getClass().getResource("/").getPath()+"../../images/scenic/";
                     //新图片
                     File newFile = new File(pathRoot);
                     //将内存的图片数据写入磁盘
@@ -100,10 +100,10 @@ public class UploadFileServiceImp implements UploadFileService {
                     String originalFileName = file.getOriginalFilename();
                     //新文件名
                     String newFileName = UUID.randomUUID() + originalFileName.substring(originalFileName.lastIndexOf("."));
-                    String save = "area/"+specialtyNum+"/specialty/"+newFileName;
+                    String save = newFileName;
                     picPath.add(save);  
                     //获得物理路径webapp所在路径，即新文件将要保存的路径
-                    String pathRoot = "E:/upload/temp/"+save;
+                    String pathRoot = this.getClass().getResource("/").getPath()+"../../images/techan/";
                     //新图片
                     File newFile = new File(pathRoot);
                     //将内存的图片数据写入磁盘
@@ -128,10 +128,10 @@ public class UploadFileServiceImp implements UploadFileService {
                     String originalFileName = file.getOriginalFilename();
                     //新文件名
                     String newFileName = UUID.randomUUID() + originalFileName.substring(originalFileName.lastIndexOf("."));
-                    String save = "area/"+hNum+"/hotel/"+newFileName;
+                    String save = newFileName;
                     picPath.add(save);  
                     //获得物理路径,即新文件将要保存的路径
-                    String pathRoot = "E:/upload/temp/"+save;
+                    String pathRoot = this.getClass().getResource("/").getPath()+"../../images/hotel/";
                     //新图片
                     File newFile = new File(pathRoot);
                     //将内存的图片数据写入磁盘
@@ -149,9 +149,9 @@ public class UploadFileServiceImp implements UploadFileService {
         String originalFileName = file.getOriginalFilename();
         //新文件名
         String newFileName = UUID.randomUUID() + originalFileName.substring(originalFileName.lastIndexOf("."));
-        String save = "ads/"+newFileName;
+        String save = newFileName;
         //获得物理路径,即新文件将要保存的路径
-        String pathRoot = "E:/upload/temp/"+save;
+        String pathRoot = this.getClass().getResource("/").getPath()+"../../images/ads/";
         //新图片
         File newFile = new File(pathRoot);
         //将内存的图片数据写入磁盘
@@ -165,9 +165,9 @@ public class UploadFileServiceImp implements UploadFileService {
         String originalFileName = file.getOriginalFilename();
         //新文件名
         String newFileName = UUID.randomUUID() + originalFileName.substring(originalFileName.lastIndexOf("."));
-        String save = "information/"+newFileName;
+        String save = newFileName;
         //获得物理路径,即新文件将要保存的路径
-        String pathRoot = "E:/upload/temp/"+save;
+        String pathRoot = this.getClass().getResource("/").getPath()+"../../images/information/";
         //新图片
         File newFile = new File(pathRoot);
         //将内存的图片数据写入磁盘

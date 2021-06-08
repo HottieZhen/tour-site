@@ -230,7 +230,7 @@
 
 									<li>
 										<div class="pic">
-											<img src="/pic/${comment.userimag}" />
+											<img src="/images/user/${comment.userimag}" />
 										</div>
 										<div class="con">
 											<label>【用户名】${comment.username}</label>

@@ -47,8 +47,7 @@
 							<div class="box">
 								<div class="pic">
 									<div class="cover">
-										<a
-											href="${pageContext.request.contextPath}/travel/travelArticle?id=${travel.id}"><img
+										<a href="${pageContext.request.contextPath}/travel/travelArticle?id=${travel.id}"><img
 											class="scale-effect " src="/images/travel/${travel.pic1}" />"/></a>
 									</div>
 									<div class="head">
@@ -59,7 +58,7 @@
 									<p>
 										<a href="note.html">${travel.signature}</a>
 									</p>
-									<span>2017/02/02 作者：${travel.username}<label><img
+									<span><fmt:formatDate value='${travel.ptime}' type='date' pattern='yyyy/MM/dd'/> 作者：${travel.username}<label><img
 											src="images/state_icon1.png" />${travel.readnum}</label></span>
 								</div>
 							</div>

@@ -66,7 +66,8 @@
 									</div>
 									<div class="con">
 										<h3>
-											<a href="project.html">${specialty.tname}</a>
+											<a href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${specialty.tnum}&id=${specialty.id}">${specialty.tname}</a>
+<%--											<a href="project.html">${specialty.tname}</a>--%>
 										</h3>
 										<!-- <label>江西物流</label> -->
 									</div>

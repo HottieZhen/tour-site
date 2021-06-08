@@ -44,7 +44,7 @@
 			<form action="${pageContext.request.contextPath}/getUser/updateImage" method="post" enctype="multipart/form-data">
 			    <input type="hidden" name="userid" value="${user.userid}"/>	
 				<div id="my_head">
-					<div class="pic"><img src="/pic/${user.userimag}"/></div>
+					<div class="pic"><img src="/images/user/${user.userimag}"/></div>
 					<input name="file" class="file" type="file" /> 
 				</div>
 				<div class="operation"><input type="submit" class="save" value="保存" /></div>

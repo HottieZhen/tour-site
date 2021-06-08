@@ -20,7 +20,7 @@
        select * from information where id not in(#{value}) order by ptime  limit 0,5;
   </select>
     <select id="findALLTravels" resultType="jx.tour.pojo.TravelsVo">
-      select id,username,userimag,signature,pic1,title,readnum from user,travels where `user`.userId = travels.userNum and travels.stage=1 order by ptime desc
+      select id,username,userimag,signature,pic1,title,readnum,ptime from user,travels where `user`.userId = travels.userNum and travels.stage=1 order by ptime desc
   </select>
       <select id="findTravelsByName" resultType="jx.tour.pojo.TravelsVo">
         select id,username,userimag,signature,pic1,title,readnum from user,travels where `user`.userId = travels.userNum and title like '%${keyboard}%' and travels.stage =1 order by ptime desc 

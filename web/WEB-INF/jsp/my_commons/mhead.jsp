@@ -19,11 +19,11 @@
 					<li><a title=""
 						href="${pageContext.request.contextPath}/">首页</a><span>|</span></li>
 					<li><a title=""
-						href="${pageContext.request.contextPath}/scenic/getSomeScenic">醉美江西</a><span>|</span></li>
+						href="${pageContext.request.contextPath}/scenic/getSomeScenic">醉美浙江</a><span>|</span></li>
 					<li><a title=""
 						href="${pageContext.request.contextPath}/specialty/getAllSpecialty">特产商城</a><span>|</span></li>
 					<li><a title=""
-						href="${pageContext.request.contextPath}/travel/getAlltravels">大话江西</a><span>|</span></li>
+						href="${pageContext.request.contextPath}/travel/getAlltravels">大话浙江</a><span>|</span></li>
 					<li><a title=""
 						href="${pageContext.request.contextPath}/information/getALLInformations">新闻资讯</a></li>
 					<div class="clear"></div>
@@ -65,7 +65,7 @@
 	<c:if test="${not empty sessionScope.user}">
 	<div id="user_banner">
 		<div class="pic">
-			<a><img src="/pic/${user.userimag}" /></a> 
+			<a><img src="/images/user/${user.userimag}" /></a>
 		</div>
 		<div class="con">
 			<h2>${user.username}</h2>
