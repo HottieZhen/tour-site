@@ -58,7 +58,7 @@ body {
 	float: left;
 }
 
-/*--------------选择江西城市-----------------*/
+/*--------------选择浙江城市-----------------*/
 #ADV {
 	width: 325px;
 	height: 440px;
@@ -74,7 +74,7 @@ body {
 	display: inline-block;
 	margin-left: 15px;
 	margin-bottom: 5px;
-	box-shadow: 10, 10, 5, #000;
+	box-shadow: 10px 10px 5px #000;
 }
 
 #ADV ul li a {
@@ -353,7 +353,7 @@ body {
 }
 
 #toolbar .user-bd .nav_sort .i1 {
-	background: url(../images/user_ico1.png) no-repeat center;
+	/*background: url(../images/user_ico1.png) no-repeat center;*/
 }
 
 #toolbar .user-bd .nav_sort .i2 {
@@ -361,7 +361,7 @@ body {
 }
 
 #toolbar .user-bd .nav_sort .i3 {
-	background: url(../images/user_ico3.png) no-repeat center;
+	/*background: url(../images/user_ico3.png) no-repeat center;*/
 }
 
 #toolbar .user-bd .nav_sort .i4 {
@@ -369,11 +369,11 @@ body {
 }
 
 #toolbar .user-bd .nav_sort .i5 {
-	background: url(../images/user_ico5.png) no-repeat center;
+	/*background: url(../images/user_ico5.png) no-repeat center;*/
 }
 
 #toolbar .user-bd .nav_sort .i6 {
-	background: url(../images/user_ico6.png) no-repeat center;
+	/*background: url(../images/user_ico6.png) no-repeat center;*/
 }
 
 #toolbar .user-bd .nav_sort .i7 {
@@ -386,6 +386,7 @@ body {
 
 #toolbar .user-bd .nav_sort .i9 {
 	background: url(../images/user_ico9.png) no-repeat center;
+
 }
 /*-----------------版头----------------*/
 #header {
@@ -547,7 +548,7 @@ body {
 	display: none;
 	width: 76px;
 	height: 76px;
-	background: url(../images/index_banner_btn.png) no-repeat;
+	/*background: url(../images/index_banner_btn.png) no-repeat;*/
 	position: absolute;
 	top: 140px;
 }
@@ -645,7 +646,7 @@ body {
 	margin: 0 17px;
 }
 
-/*-----------------首页孟津旅游----------------*/
+/*-----------------首页旅游----------------*/
 #h_scenic {
 	height: 678px;
 	padding-top: 50px;
@@ -736,7 +737,7 @@ body {
 	-o-border-radius: 50%;
 	border-radius: 50%;
 }
-/*-----------------首页孟津美食----------------*/
+/*-----------------首页浙江美食----------------*/
 #h_food {
 	height: 710px;
 	padding-top: 50px;
@@ -840,7 +841,7 @@ body {
 	border-radius: 20px;
 }
 
-/*-----------------首页孟津特产----------------*/
+/*-----------------首页特产----------------*/
 #h_project {
 	height: 968px;
 	padding-top: 50px;
@@ -868,6 +869,17 @@ body {
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 }
+
+/*#h_project .con li span {*/
+/*	position: absolute;*/
+/*	bottom: 0;*/
+/*	color: white;*/
+/*	width: 100%;*/
+/*	text-align: center;*/
+/*	line-height: 30px;*/
+/*	background: rgba(0, 0, 0, 0.5) none repeat scroll !important;*/
+/*	filter: Alpha(opacity = 50);*/
+/*}*/
 
 #h_project .con li:first-child {
 	width: 790px;
@@ -2540,7 +2552,7 @@ body {
 .peripheral_recom li {
 	margin-bottom: 20px;
 	padding-bottom: 20px;
-	border-bottom: 1px solid .ddd;
+	border-bottom: 1px solid #ddd;
 }
 
 .peripheral_recom li:last-child {

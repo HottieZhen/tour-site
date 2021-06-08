@@ -10,6 +10,8 @@
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
 	<link rel="stylesheet" type="text/css" href="css/blogin.css">
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body>
 	<div class="htmleaf-container">

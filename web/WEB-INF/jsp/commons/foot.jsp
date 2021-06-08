@@ -13,15 +13,15 @@
 			<div class="line">
 				<img alt="" src="images/b_line.png" />
 			</div>
-			<div class="b_logo">
-				<img alt="" src="images/t_logo.jpg" />
-			</div>
+<%--			<div class="b_logo">--%>
+<%--				<img alt="" src="images/t_logo.jpg" />--%>
+<%--			</div>--%>
 			<div class="con">
-				<p>江西文化旅游发展有限公司 版权所有</p>
-				<p>地址：江西省南昌市 邮编：9999999 电话：0379-111110000
+				<p>浙江文化旅游发展有限公司 版权所有</p>
+				<p>地址：浙江省宁波市 邮编：9999999 电话：0579-111110000
 					业务电话：0379-64500000</p>
-				<p>Copyright 2018 tour.jxcn.cn All Rights Reserved |
-					赣ICP备10000000号 技术支持：南昌航空大学软件学院</p>
+				<p>Copyright 2021 www.lvxingzj,cn All Rights Reserved |
+					浙ICP备10000000号 技术支持：宁波大学科学技术学院</p>
 			</div>
 			<div class="clear"></div>
 		</div>

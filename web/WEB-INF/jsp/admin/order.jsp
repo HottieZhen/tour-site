@@ -24,6 +24,8 @@
 <link rel="shortcut icon" href="images/t_logo.jpg">
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/admin-scripts.js"></script>
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 
 </head>
 <body class="user-select">
@@ -68,7 +70,7 @@
 								<td>${item.tname}</td>
 								<td><div style="width: 50px; heigth: 50px;" class="pdiv">
 										<img style="width: 100%; heigth: 100%;" class="pic"
-											src="/pic/${item.tpic}" />
+											src="/images/techan/${item.tpic}" />
 									</div></td>
 								<td><font color="red">${item.tnum}</font></td>
 								<td>${item.total}</td>
@@ -81,9 +83,9 @@
 									    </c:if>
 							    </td>
 
-								<td style="display: none">/pic/${item.tpic}</td>
-								<td style="display: none">/pic/${item.pic2}</td>
-								<td style="display: none">/pic/${item.pic3}</td>
+								<td style="display: none">/images/techan/${item.tpic}</td>
+								<td style="display: none">/images/techan/${item.pic2}</td>
+								<td style="display: none">/images/techan/${item.pic3}</td>
 								<td style="display: none">${item.tprice}</td>
 								<td style="width: 188px;">
 									<button type="button" class="btn btn-info" data-toggle="modal"

@@ -8,6 +8,8 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface TravelsMapper {
+//    void updateRead(int id);
+
     int countByExample(TravelsExample example);
 
     int deleteByExample(TravelsExample example);

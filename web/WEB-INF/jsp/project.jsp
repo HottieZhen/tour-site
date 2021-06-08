@@ -22,6 +22,8 @@
 <!------------核心样式-------------->
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body>
 	<!-------------------工具栏------------------->
@@ -197,7 +199,7 @@
 					<div id="comment">
 					<c:if test="${not empty sessionScope.user}">
 							<div class="release">
-								<img src="/pic/${user.userimag}" /> 
+								<img src="/images/user/${user.userimag}" />
 								
 								
 								<!----------评论提交----------->   
@@ -272,7 +274,7 @@
 								<li>
 									<div class="pic">
 										<a title="" href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${comment.tnum}&id=${comment.id}"><img alt="" class="scale-effect"
-											src="/pic/${comment.tpic}" /></a>
+											src="/images/techan/${comment.tpic}" /></a>
 									</div>
 									<div class="con">
 										<a href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${comment.tnum}&id=${comment.id}">${comment.tname}</a> <p>

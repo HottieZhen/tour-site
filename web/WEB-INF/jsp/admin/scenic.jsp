@@ -24,6 +24,8 @@
 <link rel="shortcut icon" href="images/t_logo.jpg">
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/admin-scripts.js"></script>
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 
 </head>
 <body class="user-select">
@@ -77,7 +79,7 @@
 								<td>${scenicVo.scenicaddress}</td>
 								<td><div style="width: 50px; heigth: 50px;" class="pdiv">
 										<img style="width: 100%; heigth: 100%;" class="pic"
-											src="/pic/${scenicVo.pic1}" />
+											src="/images/scenic/${scenicVo.pic1}" />
 									</div></td>
 								<td>${scenicVo.cost}</td>
 								<td>${scenicVo.time}</td>
@@ -87,9 +89,9 @@
 								<td style="display: none">${scenicVo.title1}</td>
 								<td style="display: none">${scenicVo.describle}</td>
 								<td style="display: none">${scenicVo.category}</td>
-								<td style="display: none">/pic/${scenicVo.pic1}</td>
-								<td style="display: none">/pic/${scenicVo.pic2}</td>
-								<td style="display: none">/pic/${scenicVo.pic3}</td>
+								<td style="display: none">/images/scenic/${scenicVo.pic1}</td>
+								<td style="display: none">/images/scenic/${scenicVo.pic2}</td>
+								<td style="display: none">/images/scenic/${scenicVo.pic3}</td>
 								<td style="display: none">${scenicVo.stage}</td>
 								<td style="display: none">${scenicVo.pic1}</td>
 								<td style="width: 250px;">
@@ -748,7 +750,7 @@
 																			+ scenicVo.scenicaddress
 																			+ '</td>'
 																			+ '<td><div style="width: 50px; heigth: 50px;" class="pdiv">'
-																			+ '<img style="width: 100%; heigth: 100%;" class="pic" src="/pic/'
+																			+ '<img style="width: 100%; heigth: 100%;" class="pic" src="/images/scenic/'
 																			+ scenicVo.pic1
 																			+ '" /></div></td>'
 																			+ '<td>'
@@ -775,13 +777,13 @@
 																			+ '<td style="display: none">'
 																			+ scenicVo.category
 																			+ '</td>'
-																			+ '<td style="display: none">/pic/'
+																			+ '<td style="display: none">/images/scenic/'
 																			+ scenicVo.pic1
 																			+ '</td>'
-																			+ '<td style="display: none">/pic/'
+																			+ '<td style="display: none">/images/scenic/'
 																			+ scenicVo.pic2
 																			+ '</td>'
-																			+ '<td style="display: none">/pic/'
+																			+ '<td style="display: none">/images/scenic/'
 																			+ scenicVo.pic3
 																			+ '</td>'
 																			+ '<td style="display: none">'

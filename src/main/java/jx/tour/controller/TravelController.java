@@ -35,7 +35,7 @@ public class TravelController {
 	public String travelArticle(Model model,int id)throws Exception{
 
 		//浏览量增加
-
+//		travelsService.addView(id);
 		TravelsVo travelsVo = travelsService.getTravelsVo(id);
 		List<HComment> travelCommentList = travelsService.getTravelsComment(id);
 		List<TravelsVo> otherTravelList = travelsService.getOtherTravels(id);

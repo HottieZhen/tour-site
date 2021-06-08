@@ -27,7 +27,8 @@ public class UploadFileServiceImp implements UploadFileService {
                     String save = "travel/"+newFileName;
                     picPath.add(save);
                     //获得物理路径webapp所在路径，即新文件将要保存的路径
-                    String pathRoot = "E:/upload/temp/"+"travel/";  
+//                    String pathRoot = "E:/upload/temp/"+"travel/";
+                    String pathRoot = "E:/upload/temp/"+"travel/";
                     //新图片
                     File newFile = new File(pathRoot+newFileName);
                     //将内存的图片数据写入磁盘

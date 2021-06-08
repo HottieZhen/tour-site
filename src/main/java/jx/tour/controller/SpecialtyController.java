@@ -59,7 +59,7 @@ public class SpecialtyController {
 		
 		
 		
-		//在边框出显示其他的风景（玩在江西）、特产（吃在江西）、酒店（住在江西）
+		//在边框出显示其他的风景（玩在浙江）、特产（吃在浙江）、酒店（住在浙江）
 		List<Scenic> scenics = scenicService.getScenics();
 		model.addAttribute("scenics", scenics);
 		

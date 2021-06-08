@@ -23,6 +23,7 @@
 <link rel="shortcut icon" href="images/t_logo.jpg">
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/admin-scripts.js"></script>
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
 
 </head>
 <body class="user-select">
@@ -74,19 +75,19 @@
 								<td>
 									<div style="width: 50px; heigth: 50px;" class="pdiv">
 										<img style="width: 100%; heigth: 100%;" class="pic"
-											src="/pic/${item.pic1}" />
+											src="/images/travel/${item.pic1}" />
 									</div>
 								</td>
 								<td>
 									<div style="width: 50px; heigth: 50px;" class="pdiv">
 										<img style="width: 100%; heigth: 100%;" class="pic"
-											src="/pic/${item.pic2}" />
+											src="/images/travel/${item.pic2}" />
 									</div>
 								</td>
 								<td>
 									<div style="width: 50px; heigth: 50px;" class="pdiv">
 										<img style="width: 100%; heigth: 100%;" class="pic"
-											src="/pic/${item.pic3}" />
+											src="/images/travel/${item.pic3}" />
 									</div>
 								</td>
 
@@ -108,11 +109,11 @@
 								</a>
 								</td>
 								<td style="display: none">${item.describle1}</td>
-								<td style="display: none">/pic/${item.pic1}</td>
+								<td style="display: none">/images/travel/${item.pic1}</td>
 								<td style="display: none">${item.describle2}</td>
-								<td style="display: none">/pic/${item.pic2}</td>
+								<td style="display: none">/images/travel/${item.pic2}</td>
 								<td style="display: none">${item.describle3}</td>
-								<td style="display: none">/pic/${item.pic3}</td>
+								<td style="display: none">/images/travel/${item.pic3}</td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -360,17 +361,17 @@
 													+'<td>'+commonTime+'</td>'
 													+'<td>'
 														+'<div style="width: 50px; heigth: 50px;" class="pdiv">'
-															+'<img style="width: 100%; heigth: 100%;" class="pic" src="/pic/'+item.pic1+'" />'
+															+'<img style="width: 100%; heigth: 100%;" class="pic" src="/images/travel/'+item.pic1+'" />'
 														+'</div>'
 													+'</td>'
 													+'<td>' 
 													+'<div style="width: 50px; heigth: 50px;" class="pdiv">'
-													+'<img style="width: 100%; heigth: 100%;" class="pic" src="/pic/'+item.pic2+'" />'
+													+'<img style="width: 100%; heigth: 100%;" class="pic" src="/images/travel/'+item.pic2+'" />'
 													+'</div>'
 													+'</td>'
 													+'<td>'
 													+'<div style="width: 50px; heigth: 50px;" class="pdiv">'
-													+'<img style="width: 100%; heigth: 100%;" class="pic" src="/pic/'+item.pic3+'" />'
+													+'<img style="width: 100%; heigth: 100%;" class="pic" src="/images/travel/'+item.pic3+'" />'
 													+'</div>'
 													+'</td>'
 
@@ -387,11 +388,11 @@
 													+'</a>'
 													+'</td>'
 													+'<td style="display: none">'+item.describle1+'</td>'
-													+'<td style="display: none">/pic/'+item.pic1+'</td>'
+													+'<td style="display: none">/images/travel/'+item.pic1+'</td>'
 													+'<td style="display: none">'+item.describle2+'</td>'
-													+'<td style="display: none">/pic/'+item.pic2+'</td>'
+													+'<td style="display: none">/images/travel/'+item.pic2+'</td>'
 													+'<td style="display: none">'+item.describle3+'</td>'
-													+'<td style="display: none">/pic/'+item.pic3+'</td>'
+													+'<td style="display: none">/images/travel/'+item.pic3+'</td>'
 													+'</tr>';
 			
 											});

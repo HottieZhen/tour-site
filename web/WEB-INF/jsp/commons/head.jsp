@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>head</title>
+
 </head>
 <body>    
 	<!--工具栏-->
@@ -29,7 +30,7 @@
 					<li class="tb"><a href="#">${user.username}</a> <!----用户-->
 						<div class="user">
 							<a class="user-hd" href="#"> <img
-								src="/pic/${user.userimag}" /><b></b>
+								src="/images/user/${user.userimag}" /><b></b>
 								<div class="clear"></div>  
 							</a>
 							<div class="user-bd">
@@ -66,7 +67,7 @@
 			<!-------------------logo------------------->
 			<div class="logo fl">
 				<a title="" href="index.html"><img alt=""
-					src="images/t_logo.jpg"></a>
+					src="images/logo.jpg"></a>
 			</div>
 			<div class="search_nav fl"> 
 				<!-------------------搜索------------------->

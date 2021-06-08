@@ -22,7 +22,7 @@ public interface TravelsService {
 	 List<TravelsVo> getTravelsByName(Search search);
 	 
   //评论游记
-	 public void giveTravelCommment(Travelcomment travelcomment);
+  public void giveTravelCommment(Travelcomment travelcomment);
   //给游记点赞
   public void addGood(GiveGood giveGood);
   //根据用户id查询该用户所有发布过的游记
@@ -31,6 +31,8 @@ public interface TravelsService {
   public void editTravel(TravelsVo travelsVo);
   //删除游记
   public void deleteTravel(int travelid);
-  
+
+//  //游记浏览量增加
+//  public void addView(int travelid);
  
 }

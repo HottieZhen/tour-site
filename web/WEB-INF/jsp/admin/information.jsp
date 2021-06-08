@@ -23,6 +23,7 @@
 <link rel="shortcut icon" href="images/t_logo.jpg">
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/admin-scripts.js"></script>
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
 
 </head>
 <body class="user-select">
@@ -63,7 +64,7 @@
 								<td>${item.title}</td>
 								<td><div style="width: 50px; heigth: 50px;" class="pdiv">
 										<img style="width: 100%; heigth: 100%;" class="pic"
-											src="/pic/${item.pic}" />
+											src="/images/information/${item.pic}" />
 									</div></td>
 								<td><font color="blue"><fmt:formatDate value="${item.ptime}" pattern="yyyy-MM-dd HH:mm:ss" /></font></td>
 								<td><c:if test="${item.stage eq 0}">
@@ -72,7 +73,7 @@
 									                    上架
 							          </c:if></td>
 				
-								<td style="display: none">/pic/${item.pic}</td>
+								<td style="display: none">/images/information/${item.pic}</td>
 								<td style="display: none">${item.stage}</td>
 								<td style="display: none">${item.describle}</td>
 								<td style="width: 188px;">

@@ -50,8 +50,6 @@
             <li><a href="${pageContext.request.contextPath}/backAds/requestAllAds.action">广告管理</a></li>
             <li><a href="${pageContext.request.contextPath}/backInformation/requestAllInformation.action">资讯管理</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="${pageContext.request.contextPath}/backContent/getPublishContent.action?categoryid=1">特产管理</a></li>
-            <li><a href="${pageContext.request.contextPath}/backContent/getPublishContent.action?categoryid=0">景区管理</a></li>
           </ul>
         </li>
       </ul>

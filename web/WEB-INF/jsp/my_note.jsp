@@ -16,7 +16,9 @@
     <script type="text/javascript" src="js/amazeui.js"></script>
     <link rel="stylesheet" type="text/css" href="css/amazeui.css">
     <!------------核心样式-------------->
-    <link rel="stylesheet" type="text/css" href="css/user.css"> 
+    <link rel="stylesheet" type="text/css" href="css/user.css">
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body>
   <%@include file="/WEB-INF/jsp/my_commons/mhead.jsp"%>  
@@ -33,11 +35,11 @@
 			
 			<c:forEach items="${userAllTravels}" var="travel" varStatus="id">
 				<li class="pd_r150">
-					<div class="pic"><img src="/pic/${travel.pic1}"/></div>
+					<div class="pic"><img src="/images/travel/${travel.pic1}"/></div>
 					<div class="con">
 						<a href="${pageContext.request.contextPath}/travel/travelArticle?id=${travel.id}"><h3>${travel.title}</h3></a>
 						<div class="user">
-							<span><img src="/pic/${travel.userimag}" />作者：<font>${travel.username}</font></span>
+							<span><img src="/images/user/${travel.userimag}" />作者：<font>${travel.username}</font></span>
 							<label><img src="images/state_icon1.png" />${travel.readnum}</label>
 						</div>
 						<p>${travel.signature}</p>  

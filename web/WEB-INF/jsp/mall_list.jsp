@@ -20,6 +20,8 @@
 	<link rel="stylesheet" type="text/css" href="css/amazeui.css">
     <!------------核心样式-------------->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body>
   <!--引入页面头部head.html-->

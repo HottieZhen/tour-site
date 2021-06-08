@@ -16,7 +16,7 @@
 <!---核心样式-->
 
 <link rel="stylesheet" type="text/css" href="css/style.css">
-
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
 
 </head>
 <body>
@@ -124,9 +124,9 @@
 						$.each(data, function(i,item) {	
 					    html+='<li>'
 						+'<div class="box">'
-							 +'<div class="pic"><a title="" href="${pageContext.request.contextPath}/travel/travelArticle?id='+item.id+'"><img alt="" class="scale-effect" src=/pic/'+item.pic1+' /></a></div>'
+							 +'<div class="pic"><a title="" href="${pageContext.request.contextPath}/travel/travelArticle?id='+item.id+'"><img alt="" class="scale-effect" src=/images/travel/'+item.pic1+' /></a></div>'
 							+'<div class="user">'
-							 +'<div class="head"><img alt="" src=/pic/'+item.userimag+' /></div>'
+							 +'<div class="head"><img alt="" src=/images/user/'+item.userimag+' /></div>'
 							 +'<p>'+item.username+'</p>'
 								+'<span><label><img alt="" src="images/state_icon1.png" />'+item.readnum+'</label></span>'
 						    +'</div>'
@@ -165,7 +165,7 @@
 						    var time = new Date(item.ptime) ;
 							commonTime = time.toLocaleString();
 							if(i<4){
-									html1+='<li><a  href="${pageContext.request.contextPath}/information/getInformation?id='+item.id+'"> <img title="" class="scale-effect" src=/pic/'+item.pic+' /><p>'+item.title+'</p></a></li>'
+									html1+='<li><a  href="${pageContext.request.contextPath}/information/getInformation?id='+item.id+'"> <img title="" class="scale-effect" src=/images/'+item.pic+' /><p>'+item.title+'</p></a></li>'
 							}
 							html2+='<li><a title="" href="${pageContext.request.contextPath}/information/getInformation?id='+item.id+'">'+item.title+'</a><span>'+commonTime+'</span></li>'		
 						});

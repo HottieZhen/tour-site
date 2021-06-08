@@ -22,6 +22,8 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <link href="css/editor.css" type="text/css" rel="stylesheet" />
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body>
 	<%@ include file="/WEB-INF/jsp/my_commons/mhead.jsp"%>

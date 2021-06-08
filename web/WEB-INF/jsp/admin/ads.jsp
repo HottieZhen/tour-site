@@ -25,6 +25,8 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/admin-scripts.js"></script>
 
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body class="user-select">
 	<section class="container-fluid">

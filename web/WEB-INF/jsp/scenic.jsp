@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>江西旅游网</title>
+<title>浙江旅游网</title>
 <!-- Bootstrap -->  
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -26,6 +26,7 @@
 <link rel="stylesheet" type="text/css" href="css/amazeui.css">
 <!---核心样式-->
 <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
 
 </head>
 <body>

@@ -20,7 +20,9 @@
     <script type="text/javascript" src="js/amazeui.js"></script>
     <link rel="stylesheet" type="text/css" href="css/amazeui.css">
     <!------------核心样式-------------->
-    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body>
     <!--引入页面头部head.html-->
@@ -53,7 +55,7 @@
 					<c:forEach items="${pageInfo.list}" var="information" varStatus="id">
 					    <li>
 							<!-- <div class="date"><p>22</p><span>12月</span></div> -->
-							<div class="pic"><a href="${pageContext.request.contextPath}/information/getInformation?id=${information.id}"><img class="scale-effect" src="/pic/${information.pic}"/></a></div>
+							<div class="pic"><a href="${pageContext.request.contextPath}/information/getInformation?id=${information.id}"><img class="scale-effect" src="/images/${information.pic}"/></a></div>
 							<div class="con">
 								<h3>${information.title}</h3>
 							<p>发布时间：<fmt:formatDate value="${information.ptime}" pattern="yyyy-MM-dd HH:mm:ss"/><a href="${pageContext.request.contextPath}/information/getInformation?id=${information.id}">详细信息</a></p>

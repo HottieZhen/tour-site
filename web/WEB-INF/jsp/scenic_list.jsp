@@ -19,6 +19,8 @@
 <link rel="stylesheet" type="text/css" href="css/amazeui.css">
 <!------------核心样式-------------->
 <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body>
 	<!--引入页面头部head.html-->
@@ -62,7 +64,7 @@
 						<c:forEach items="${scenictList}" var="sc">  
                              <li>
 								<div class="pic">
-									<a href="${pageContext.request.contextPath}/scenic/getScenic?id=${sc.scenicid}&scenicnum=${sc.scenicnum}"><img class="scale-effect" src="/pic/${sc.pic1}"/></a>
+									<a href="${pageContext.request.contextPath}/scenic/getScenic?id=${sc.scenicid}&scenicnum=${sc.scenicnum}"><img class="scale-effect" src="/images/scenic/${sc.pic1}"/></a>
 								</div>
 								<div class="con">
 									<h3>

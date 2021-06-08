@@ -20,7 +20,7 @@ body{width:100%;min-width:1280px;background:#efefef;}
 .pd_r150{padding-right:150px;}
 /*-----------------放大图片----------------*/
 .scale-effect{transition:All 0.2s ease-in-out;-webkit-transition:All 0.2s ease-in-out;-moz-transition:All 0.2s ease-in-out;-o-transition:All 0.2s ease-in-out;}
-.scale-effect:hover{transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-o-transform:scale(1.2);-ms-transform:scale(1.2);}
+.scale-effect:hover {transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-o-transform:scale(1.2);-ms-transform:scale(1.2);}
 /*-----------------版头----------------*/
 #header{height:60px;z-index:1000;background:white;position:relative;-webkit-box-shadow:0px 1px 5px rgba(0,0,0,0.4);-moz-box-shadow:0px 1px 5px rgba(0,0,0,0.4);box-shadow:0px 1px 5px rgba(0,0,0,0.4);}
 #header .logo{float:left;margin-top:3px;}

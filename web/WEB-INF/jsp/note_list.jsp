@@ -20,7 +20,9 @@
     <script type="text/javascript" src="js/amazeui.js"></script>
     <link rel="stylesheet" type="text/css" href="css/amazeui.css">
     <!------------核心样式-------------->
-    <link rel="stylesheet" type="text/css" href="css/style.css">    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body>
 <!-------------------工具栏------------------->
@@ -29,7 +31,7 @@
 <div id="note_list">
 	<div class="banner">
 		<h2>留下你的回忆</h2>
-		<p>发现美丽江西，记录精彩瞬间，保存美好回忆</p>
+		<p>发现美丽浙江，记录精彩瞬间，保存美好回忆</p>
 	</div>
 	<div class="tag">
 		<div class="cw1200">

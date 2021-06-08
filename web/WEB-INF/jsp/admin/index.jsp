@@ -18,7 +18,9 @@
 <script src="js/jquery-2.1.4.min.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="js/echarts.min.js"></script>
-<script type="text/javascript" src="js/dataView.js"></script>  
+<script type="text/javascript" src="js/dataView.js"></script>
+  <link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body class="user-select">
 <section class="container-fluid">
@@ -149,7 +151,7 @@ $(function(){
             	var option = {
             		backgroundColor: '#FBFBFB',
             	    title:{
-            	        text:'江西省各地级市特产商城的销售情况'
+            	        text:'浙江省各地级市特产商城的销售情况'
             	    },
             	    tooltip:{
             	    	 trigger: 'axis'  
@@ -227,17 +229,12 @@ $(function(){
             	                 }  
             	            },  
             	             data:data.value2
-            	         
             	        }
-            	          
             	  ]
-            	    
             	};
-            	
             	//使用制定的配置项和数据显示图表
             	myChart.setOption(option);
-            	
-            	
+
             }
         },
         error : function(errorMsg) {
@@ -246,9 +243,6 @@ $(function(){
     });
 
 });
-	
-
-
 
 </script> 
 

@@ -22,6 +22,7 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <link href="css/editor.css" type="text/css" rel="stylesheet" />
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
 
 </head>
 <body>
@@ -53,7 +54,7 @@
 								<td>风景一：
 									<div id="pic1">
 										<c:if test="${travel.pic1!=null}">
-											<img src="/pic/${travel.pic1}" />
+											<img src="/images/travel/${travel.pic1}" />
 										</c:if>
 
 									</div>
@@ -68,7 +69,7 @@
 								<td>风景二：
 									<div id="pic2">
 										<c:if test="${travel.pic2!=null}">
-											<img src="/pic/${travel.pic2}" />
+											<img src="/images/travel/${travel.pic2}" />
 										</c:if>
 									</div>
 								</td>
@@ -82,7 +83,7 @@
 								<td>风景三：
 									<div id="pic3">
 										<c:if test="${travel.pic3!=null}">
-											<img src="/pic/${travel.pic3}" />
+											<img src="/images/travel/${travel.pic3}" />
 										</c:if>
 									</div>
 								</td>

@@ -24,6 +24,7 @@
 <link rel="shortcut icon" href="images/t_logo.jpg">
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/admin-scripts.js"></script>
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
 
 </head>
 <body class="user-select">
@@ -70,7 +71,7 @@
 								<td>${item.areaName}</td>
 								<td><div style="width: 50px; heigth: 50px;" class="pdiv">
 										<img style="width: 100%; heigth: 100%;" class="pic"
-											src="/pic/${item.pic}" />
+											src="/images/hotel/${item.pic}" />
 									</div></td>
 								<td><font color="red">${item.price}</font></td>
 								<td>${item.tel}</td>
@@ -81,7 +82,7 @@
 							          </c:if></td>
 								<td>${item.haddress}</td>
 								<td style="display: none">${item.stage}</td>
-								<td style="display: none">/pic/${item.pic}</td>
+								<td style="display: none">/images/hotel/${item.pic}</td>
 								<td style="display: none">${item.hnum}</td>
 								<td style="display: none">${item.describle}</td>
 								<td style="width: 188px;">

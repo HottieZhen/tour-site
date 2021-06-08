@@ -20,6 +20,8 @@
 <link rel="stylesheet" type="text/css" href="css/amazeui.css">
 	<!------------核心样式-------------->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body>
 	<!--引入页面头部head.html-->
@@ -97,7 +99,7 @@
 						</div>
 						<div class="con">
 
-							<img src="/pic/${information.pic}" />
+							<img src="/images/information/${information.pic}" />
 							<p>${information.describle}</p>
 
 						</div>
@@ -160,7 +162,7 @@
 								<li>
 									<div class="pic">
 										<a title="" href="${pageContext.request.contextPath}/information/getInformation?id=${information.id}"><img alt="" class="scale-effect"
-											src="/pic/${information.pic}" /></a>
+											src="/images/information/${information.pic}" /></a>
 									</div>
 									<div class="con">
 										<a href="${pageContext.request.contextPath}/information/getInformation?id=${information.id}">${information.title}</a> <span><i

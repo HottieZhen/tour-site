@@ -63,7 +63,7 @@
 				<c:forEach items="${someRedScenicList}" var="redScenic" varStatus="id">
 					<li><a href="${pageContext.request.contextPath}/scenic/getScenic?id=${redScenic.scenicid}&scenicnum=${redScenic.scenicnum}">
 							<div class="pic">
-								<img class="scale-effect" src="/pic/${redScenic.pic1}" />
+								<img class="scale-effect" src="/images/scenic/${redScenic.pic1}" />
 							</div>
 							<p>${redScenic.name}</p>
 					</a></li>
@@ -100,7 +100,7 @@
 				<c:forEach items="${someSpecialtyList}" var="specialty" varStatus="id">
 					<li><a href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${specialty.tnum}&id=${specialty.id}">
 							<div class="pic">
-								<img class="scale-effect" src="/pic/${specialty.tpic}"/>
+								<img class="scale-effect" src="/images/techan/${specialty.tpic}"/>
 							</div>
 							<p>${specialty.tname}</p>
 					</a></li>
@@ -131,20 +131,20 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-		<!------------------公共推荐-------------------->
-		<div id="public_recom">
-			<ul>
-				<c:forEach items="${someFoodList}" var="food" varStatus="id">
-						<li><a href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${food.tnum}&id=${food.id}">
-							<div class="pic">
-								<img class="scale-effect" src="/pic/${food.tpic}"/>
-							</div>
-							<p>${food.tname}</p>
-					</a></li>
-				</c:forEach>
-				<div class="clear"></div>
-			</ul>
-		</div>
+<%--		<!------------------公共推荐-------------------->--%>
+<%--		<div id="public_recom">--%>
+<%--			<ul>--%>
+<%--				<c:forEach items="${someFoodList}" var="food" varStatus="id">--%>
+<%--						<li><a href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${food.tnum}&id=${food.id}">--%>
+<%--							<div class="pic">--%>
+<%--								<img class="scale-effect" src="/pic/${food.tpic}"/>--%>
+<%--							</div>--%>
+<%--							<p>${food.tname}</p>--%>
+<%--					</a></li>--%>
+<%--				</c:forEach>--%>
+<%--				<div class="clear"></div>--%>
+<%--			</ul>--%>
+<%--		</div>--%>
 	</div>
 	<!------------------公共盒子-------------------->
 	<div class="public_box bg2">
@@ -174,7 +174,7 @@
 				<c:forEach items="${someHotelList}" var="hotel" varStatus="id">
 					<li><a href="${pageContext.request.contextPath}/hotel/getHotel?hnum=${hotel.hnum}&hid=${hotel.hid}">
 							<div class="pic">
-								<img class="scale-effect" src="/pic/${hotel.pic}"/>
+								<img class="scale-effect" src="/images/hotel/${hotel.pic}"/>
 							</div>
 							<p>${hotel.hname}</p>
 					</a></li>

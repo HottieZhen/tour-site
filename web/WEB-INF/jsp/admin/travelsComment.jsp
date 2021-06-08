@@ -24,6 +24,7 @@
 <link rel="shortcut icon" href="images/t_logo.jpg">
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/admin-scripts.js"></script>
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
 
 </head>
 <body class="user-select">
@@ -69,7 +70,7 @@
 								<td>
 								    <div style="width: 50px; heigth: 50px;" class="pdiv">
 										<img style="width: 100%; heigth: 100%;" class="pic"
-											src="/pic/${item.pic1}" />
+											src="/images/travel/${item.pic1}" />
 									</div>
 								</td>
 								

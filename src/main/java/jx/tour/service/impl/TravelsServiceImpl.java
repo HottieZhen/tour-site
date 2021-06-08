@@ -80,4 +80,9 @@ private TravelcommentMapper travelcommentMapper;
 		
 	}
 
+//	@Override
+//	public void addView(int travelid) {
+//		travelsMapper.updateRead(travelid);
+//	}
+
 }

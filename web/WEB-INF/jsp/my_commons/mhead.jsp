@@ -10,9 +10,9 @@
 	<div id="header">
 		<div class="cw1000">
 			<!-------------------logo------------------->
-			<div class="logo">
-				<a title="" href="index.html"><img alt="" src="images/logo.jpg" /></a>
-			</div>
+<%--			<div class="logo">--%>
+<%--				<a title="" href="index.html"><img alt="" src="images/logo.jpg" /></a>--%>
+<%--			</div>--%>
 			<!-------------------导航------------------->
 			<div class="nav">
 				<ul>
@@ -33,7 +33,7 @@
 			<c:if test="${not empty sessionScope.user}">
 				<div class="user">
 					<a class="user-hd" href="#"> <img
-						src="/pic/${user.userimag}" /><b></b> 
+						src="/images/user/${user.userimag}" /><b></b>
 						<div class="clear"></div>
 					</a>
 					<div class="user-bd">

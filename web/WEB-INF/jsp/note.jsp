@@ -21,6 +21,8 @@
 <link rel="stylesheet" type="text/css" href="css/amazeui.css">
 <!------------核心样式-------------->
 <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="images/sign.png" type="image/x-icon">
+
 </head>
 <body>
 	<!-------------------工具栏------------------->
@@ -235,7 +237,7 @@
 										<div class="cover">
 											<a
 												href="${pageContext.request.contextPath}/travel/travelArticle?id=${travel.id}"><img
-												class="scale-effect " src="/pic/${travel.pic1}" /></a>
+												class="scale-effect " src="/images/travel/${travel.pic1}" /></a>
 										</div>
 										<div class="head">
 											<img src="/pic/${travel.userimag}" />
