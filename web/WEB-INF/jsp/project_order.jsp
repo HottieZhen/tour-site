@@ -61,7 +61,7 @@
 						<div class="cont">
 							<div class="con">
 								<div class="info" style="width:35%;">
-									<div class="pic"><a href="#"><img width=53 height=53 src="/pic/${order.tpic}" /></a></div>
+									<div class="pic"><a href="#"><img width=53 height=53 src="/images/techan/${order.tpic}" /></a></div>
 									<div class="name">
 										<a href="#">${order.tname}</a>
 										<p>下单日期：<fmt:formatDate value="${order.time}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
