@@ -67,9 +67,9 @@ public class AreaController {
 		pageUtils.setCurrentPageNum(page);
 		model.addAttribute("pageInfo",pageInfo);
 		model.addAttribute("pageUtils",pageUtils);
-		List<Scenic> scenics = areaService.getALLScenicList(areaId);
+		List<Scenic> scenics = areaService.getSomeRedScenic(areaId);
 		model.addAttribute("scenics", scenics);
-		List<Specialty> specialties = areaService.getALLSpecialty(areaId);
+		List<Specialty> specialties = areaService.getSomeSpecialty(areaId);
 		model.addAttribute("specialties", specialties);
 		List<Hotel> hotels = areaService.getSomHotels(areaId);
 		model.addAttribute("hotels", hotels);

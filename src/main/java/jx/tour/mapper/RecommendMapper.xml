@@ -4,21 +4,21 @@
 	<select id="findGoodSpecialty" parameterType="int"
 		resultType="jx.tour.pojo.Specialty">
 		SELECT id,tnum,tpic,tname,areaname tcategory FROM specialty,area where
-		specialty.tnum=area.areaNum and tnum=#{value} ORDER BY RAND() LIMIT 6
+		specialty.tnum=area.areaNum and tnum=#{value} ORDER BY RAND() LIMIT 3
 	</select>
 
 	<select id="findGoodFood" parameterType="int" resultType="jx.tour.pojo.Specialty">
 		SELECT * FROM specialty where tnum=#{value} and tcategory='2' ORDER BY
-		RAND() LIMIT 6
+		RAND() LIMIT 3
 	</select>
 
 	<select id="findSomeRedScenic" parameterType="int"
 		resultType="jx.tour.pojo.Scenic">
-		SELECT * FROM scenic where scenicNum=#{value} and category=1 ORDER BY RAND()
-		LIMIT 6
+		SELECT * FROM scenic where scenicNum=#{value} ORDER BY RAND()
+		LIMIT 3
 	</select>
 
 	<select id="findSomeHotels" parameterType="int" resultType="jx.tour.pojo.Hotel">
-		SELECT * FROM hotel where hnum=#{value} ORDER BY RAND() LIMIT 6
+		SELECT * FROM hotel where hnum=#{value} ORDER BY RAND() LIMIT 3
 	</select>
 </mapper>
