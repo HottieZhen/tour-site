@@ -9,6 +9,7 @@ import jx.tour.service.ScenicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -62,7 +63,13 @@ public class ScenicServiceImpl implements ScenicService{
 		 sccommentMapper.insert(sccomment);    
 	}
 
-	  
+	@Override
+	public List<Scenic> getAreaScenics(int areaNum) {
+		List<Scenic> scenicByArea = scenicCommentMapper.getScenicByArea(areaNum);
+		return scenicByArea;
+	}
+
+
 	/*后台service*/
 	@Override
 	public void downScenic(int scenicid) { 

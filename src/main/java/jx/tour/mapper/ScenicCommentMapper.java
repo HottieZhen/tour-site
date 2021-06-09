@@ -15,6 +15,10 @@ public interface ScenicCommentMapper {
 	public List<Scenic> getIndexScenic();
 	//随机显示10个景点在“醉美江西页面”
 	public List<Scenic> getSomeScenic();
+
+	//随机显示10个景点在“醉美江西页面”
+	public List<Scenic> getScenicByArea(int areaNum);
+
 	//根据景点名称模糊查询具体景点信息
 	public List<Scenic> getScenicByName(Search search);
 	

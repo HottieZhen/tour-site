@@ -1,9 +1,15 @@
 package jx.tour.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import jx.tour.pojo.Hotel;
 import jx.tour.pojo.Scenic;
 import jx.tour.pojo.Specialty;
 import jx.tour.service.AreaService;
+import jx.tour.service.HotelService;
+import jx.tour.service.ScenicService;
+import jx.tour.service.SpecialtyService;
+import jx.tour.utils.PageUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +23,16 @@ import java.util.List;
 public class AreaController {
 
 	@Autowired
+	private SpecialtyService specialtyService;
+	@Autowired
+	private HotelService hotelService;
+	@Autowired
+	private ScenicService scenicService;
+	@Autowired
 	private AreaService areaService;
+	@Autowired
+	private PageUtils pageUtils;
+
 	//获取每个城市的景点、美食等信息
 	@RequestMapping("/requestContent")
 	public String requestArea(Model model,@RequestParam(value = "id") int contentId) throws Exception {
@@ -39,5 +54,29 @@ public class AreaController {
 		model.addAttribute("someHotelList",someHotelList);
 		return "scenic_list";
 	}
+
+	@RequestMapping("/requestArea")
+	public String requestAreaScenic(Model model,@RequestParam(value = "id") int areaId,@RequestParam(required = false,defaultValue = "1",value = "page")Integer page){
+		//引入分页查询，使用PageHelper分页功能
+		//在查询之前传入当前页，然后多少记录
+		PageHelper.startPage(page,6);
+		List<Scenic> list = scenicService.getAreaScenics(areaId);
+
+		//使用PageInfo包装查询结果，只需要将pageInfo交给页面就可以
+		PageInfo<Scenic> pageInfo = new PageInfo<>(list,6);
+		pageUtils.setCurrentPageNum(page);
+		model.addAttribute("pageInfo",pageInfo);
+		model.addAttribute("pageUtils",pageUtils);
+		List<Scenic> scenics = scenicService.getScenics();
+		model.addAttribute("scenics", scenics);
+		List<Specialty> specialties = specialtyService.getSomeSpecialty();
+		model.addAttribute("specialties", specialties);
+		List<Hotel> hotels = hotelService.getSomeHotels();
+		model.addAttribute("hotels", hotels);
+
+		return "scenic_show";
+	}
+
+
 }
 	

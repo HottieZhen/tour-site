@@ -24,11 +24,11 @@
 	<div id="ADV">
 		<h3>旅游城市</h3>
 		<ul>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1101"><p>杭州</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1102"><p>宁波</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1103"><p>温州</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1104"><p>嘉兴</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1105"><p>湖州</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1101"><p>杭州</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1102"><p>宁波</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1103"><p>温州</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1104"><p>嘉兴</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1105"><p>湖州</p></a></li>
 			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1106"><p>绍兴</p></a></li>
 			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1107"><p>金华</p></a></li>
 			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1108"><p>衢州</p></a></li>

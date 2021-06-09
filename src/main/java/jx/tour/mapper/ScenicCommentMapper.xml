@@ -13,6 +13,9 @@
   <select id="getSomeScenic" resultType="jx.tour.pojo.Scenic">
        select * from scenic where stage = 1
   </select>
+    <select id="getScenicByArea" resultType="jx.tour.pojo.Scenic" parameterType="int">
+        select * from scenic where stage = 1 and scenicNum = #{areaNum}
+    </select>
   <select id="getScenicByName" parameterType="jx.tour.pojo.Search" resultType="jx.tour.pojo.Scenic">
       select * from scenic where name like '%${keyboard}%' and stage = 1    
   </select>

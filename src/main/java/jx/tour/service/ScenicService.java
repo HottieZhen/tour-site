@@ -18,7 +18,10 @@ public interface ScenicService {
   public List<Scenic> getSomeScenics();
   //发布景点评论信息
   public void publishScenicComment(ScenicComment sccomment);
-  
+
+  //根据区域查询
+  public List<Scenic> getAreaScenics(int areaNum);
+
  /* 后台service*/
   //添加景点信息
   public void addScenic(ScenicWithBLOBs scenic);
@@ -30,5 +33,7 @@ public interface ScenicService {
   public void upScenic(int scenicid);
   //查询批量下架的景点信息
   public List<ScenicVo> selectdownScenics(int ids[]);
+
+
  
 }
