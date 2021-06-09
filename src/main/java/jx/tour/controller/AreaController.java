@@ -2,6 +2,7 @@ package jx.tour.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import jx.tour.pojo.Area;
 import jx.tour.pojo.Hotel;
 import jx.tour.pojo.Scenic;
 import jx.tour.pojo.Specialty;
@@ -22,10 +23,6 @@ import java.util.List;
 @RequestMapping("/area")
 public class AreaController {
 
-	@Autowired
-	private SpecialtyService specialtyService;
-	@Autowired
-	private HotelService hotelService;
 	@Autowired
 	private ScenicService scenicService;
 	@Autowired
@@ -61,7 +58,7 @@ public class AreaController {
 		//在查询之前传入当前页，然后多少记录
 		PageHelper.startPage(page,6);
 		List<Scenic> list = scenicService.getAreaScenics(areaId);
-
+		Area area = areaService.getAreaById(areaId);
 		//使用PageInfo包装查询结果，只需要将pageInfo交给页面就可以
 		PageInfo<Scenic> pageInfo = new PageInfo<>(list,3);
 		pageUtils.setCurrentPageNum(page);
@@ -74,6 +71,7 @@ public class AreaController {
 		List<Hotel> hotels = areaService.getSomHotels(areaId);
 		model.addAttribute("hotels", hotels);
 		model.addAttribute("areaId",areaId);
+		model.addAttribute("areaName",area.getAreaname());
 
 		return "scenic_list";
 	}

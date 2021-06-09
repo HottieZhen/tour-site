@@ -29,12 +29,12 @@
 			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1103"><p>温州</p></a></li>
 			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1104"><p>嘉兴</p></a></li>
 			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1105"><p>湖州</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1106"><p>绍兴</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1107"><p>金华</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1108"><p>衢州</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1109"><p>舟山</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1110"><p>台州</p></a></li>
-			<li><a href="${pageContext.request.contextPath}/area/requestContent?id=1111"><p>丽水</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1106"><p>绍兴</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1107"><p>金华</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1108"><p>衢州</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1109"><p>舟山</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1110"><p>台州</p></a></li>
+			<li><a href="${pageContext.request.contextPath}/area/requestArea?id=1111"><p>丽水</p></a></li>
 			<li><a href="#"><p>更多...</p></a></li>
 		</ul>
 		<img src="images/tour/指示.png" id="point">

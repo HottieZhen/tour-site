@@ -1,5 +1,6 @@
 package jx.tour.service;
 
+import jx.tour.pojo.Area;
 import jx.tour.pojo.Hotel;
 import jx.tour.pojo.Scenic;
 import jx.tour.pojo.Specialty;
@@ -21,4 +22,6 @@ public interface AreaService {
   public List<Scenic> getSomeRedScenic(int id);
   //随机显示浙江某个城市的6个红色景点
   public List<Hotel> getSomHotels(int id);
+  //获得Area信息
+  public Area getAreaById(int aid);
 }

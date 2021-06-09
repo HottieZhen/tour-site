@@ -65,11 +65,11 @@ body {
 #ADV {
 	width: 325px;
 	height: 440px;
-	background: #fff url("../images/tour/边框.jpg");  
+	background: #fff url("../images/tour/边框.jpg");
 	top: 100px;
 	left: -325px;
 	position: absolute;
-	border-radius: 10px;  
+	border-radius: 10px;
 	z-index: 1234;
 }
 
@@ -323,7 +323,7 @@ body {
 }
 
 #toolbar .user-bd li {
-	
+
 }
 
 #toolbar .user:hover .user-bd {
@@ -411,7 +411,7 @@ body {
 	border: 2px solid #f60;
 	height: 44.2px;
 	margin: 0 auto;
-	width: 511px;                              
+	width: 511px;
 }
 
 #header .search select {
@@ -763,11 +763,11 @@ body {
 }
 
 #h_food .box .big {
-	
+
 }
 
 #h_food .box .big a {
-	
+
 }
 
 #h_food .box .big .pic {
@@ -786,7 +786,7 @@ body {
 }
 
 #h_food .box .list {
-	
+
 }
 
 #h_food .box .list li {
@@ -1030,7 +1030,7 @@ body {
 }
 
 #h_news .activity_news .title {
-	
+
 }
 
 #h_news .activity_news .con li {
@@ -1585,7 +1585,7 @@ body {
 
 /*-----------------游记版头----------------*/
 #note_head {
-	
+
 }
 
 #note_head .head {
@@ -2085,7 +2085,7 @@ body {
 }
 
 #item_info .p_number {
-	
+
 }
 
 #item_info .unit_price {
@@ -2201,7 +2201,7 @@ body {
 }
 
 #item_info .p_number .buy {
-	
+
 }
 
 #item_info .p_number .buy .total-font {
@@ -2223,10 +2223,10 @@ body {
 }
 
 #ss #go_buy {
-	background: #FD532D;   
+	background: #FD532D;
 	border-radius: 2px;
 	color: white;
-	display: inline-block;  
+	display: inline-block;
 	font-size: 16px;
 	height: 50px;
 	line-height: 50px;
@@ -2581,7 +2581,7 @@ body {
 }
 
 .peripheral_recom .con a {
-	
+
 }
 
 .peripheral_recom .con p {

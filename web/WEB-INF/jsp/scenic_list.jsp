@@ -54,7 +54,7 @@
 				</div>
 				<!------------------列表分类-------------------->
 				<div id="list_sort">
-					<p>浙江风景独好</p>
+					<p>${areaName}风景独好</p>
 				</div>
 				<!------------------景区列表-------------------->
 				<div id="scenic_list">
@@ -111,7 +111,7 @@
 
 		<div class="w380 fr">
 			<!--引入侧边页面side.jsp-->
-			<%@ include file="/WEB-INF/jsp/commons/newslist_side.jsp"%>
+			<%@ include file="/WEB-INF/jsp/commons/newslist_side1.jsp"%>
 
 			<!--引入尾部-->
 			<%@ include file="/WEB-INF/jsp/commons/foot.jsp"%>

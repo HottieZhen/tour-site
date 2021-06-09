@@ -1,5 +1,6 @@
 package jx.tour.service.impl;
 
+import jx.tour.mapper.AreaMapper;
 import jx.tour.mapper.RecommendMapper;
 import jx.tour.mapper.ScenicMapper;
 import jx.tour.mapper.SpecialtyMapper;
@@ -18,6 +19,8 @@ public class AreaServiceImpl implements AreaService {
 	private SpecialtyMapper specialtyMapper;
 	@Autowired
 	private RecommendMapper recommendMapper;
+	@Autowired
+	private AreaMapper areaMapper;
 	@Override
 	//显示特定城市的风景
 	public List<Scenic> getALLScenicList(int id) {
@@ -50,7 +53,7 @@ public class AreaServiceImpl implements AreaService {
 	
 	
 	@Override
-	  //随机显示江西某个城市的6种特产
+	  //随机显示浙江某个城市的6种特产
 	public List<Specialty> getSomeSpecialty(int id) {
 		List<Specialty> someSpecialtyList = recommendMapper.findGoodSpecialty(id);
 		return someSpecialtyList;
@@ -62,7 +65,7 @@ public class AreaServiceImpl implements AreaService {
 		return someFoodList;
 	}
 	@Override
-	//随机显示江西某个城市的6个红色景点
+	//随机显示浙江某个城市的6个红色景点
 	public List<Scenic> getSomeRedScenic(int id) {
 		List<Scenic> someRedScenicList = recommendMapper.findSomeRedScenic(id);
 		return someRedScenicList;
@@ -72,6 +75,11 @@ public class AreaServiceImpl implements AreaService {
 		List<Hotel> hotelsList =  recommendMapper.findSomeHotels(id);
 		return hotelsList;
 	}
-	
-	 
+
+	@Override
+	public Area getAreaById(int aid) {
+		return areaMapper.selectByPrimaryKey(aid);
+	}
+
+
 }
