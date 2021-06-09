@@ -4,7 +4,7 @@
 	<select id="getOtherHotels" resultType="jx.tour.pojo.Hotel">
 
 		select * from hotel where
-		hotel.hnum=#{0} and hotel.hid not in (#{1}) ORDER BY RAND() LIMIT 4
+		hotel.hnum=#{hnum} and hotel.hid not in (#{hid}) ORDER BY RAND() LIMIT 4
 	</select>
 	<select id="getSomeHotels" resultType="jx.tour.pojo.Hotel">
 

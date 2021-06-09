@@ -63,18 +63,19 @@ public class AreaController {
 		List<Scenic> list = scenicService.getAreaScenics(areaId);
 
 		//使用PageInfo包装查询结果，只需要将pageInfo交给页面就可以
-		PageInfo<Scenic> pageInfo = new PageInfo<>(list,6);
+		PageInfo<Scenic> pageInfo = new PageInfo<>(list,3);
 		pageUtils.setCurrentPageNum(page);
 		model.addAttribute("pageInfo",pageInfo);
 		model.addAttribute("pageUtils",pageUtils);
-		List<Scenic> scenics = scenicService.getScenics();
+		List<Scenic> scenics = areaService.getALLScenicList(areaId);
 		model.addAttribute("scenics", scenics);
-		List<Specialty> specialties = specialtyService.getSomeSpecialty();
+		List<Specialty> specialties = areaService.getALLSpecialty(areaId);
 		model.addAttribute("specialties", specialties);
-		List<Hotel> hotels = hotelService.getSomeHotels();
+		List<Hotel> hotels = areaService.getSomHotels(areaId);
 		model.addAttribute("hotels", hotels);
+		model.addAttribute("areaId",areaId);
 
-		return "scenic_show";
+		return "scenic_list";
 	}
 
 

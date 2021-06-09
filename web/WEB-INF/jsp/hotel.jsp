@@ -52,7 +52,7 @@
 				<!------------------酒店信息-------------------->
 				<div id="activity_enrolment">
 					<div class="pic">
-						<img src="/images/${hotel.pic}" />
+						<img src="/images/hotel/${hotel.pic}" />
 					</div>
 					<div class="con">
 						<h2>${hotel.hname}</h2>
@@ -112,7 +112,7 @@
 						<div id="comment">
 							<c:if test="${not empty sessionScope.user}">
 								<div class="release">
-									<img src="/pic/${user.userimag}" />
+									<img src="/images/user/${user.userimag}" />
 	                                
 								   <input type="hidden" id="hid" name="hid" value="${hotel.hid}">
 								   <input type="hidden" id="usernum" name="usernum" value="${user.userid}">
@@ -147,7 +147,7 @@
 													var time = new Date(comment.ptime) ;
 													commonTime = time.toLocaleString();
 													 html += '<li>'
-													 +'<div class="pic"><img src="/images/'+comment.userimag+'" /></div>'
+													 +'<div class="pic"><img src="/images/user/'+comment.userimag+'" /></div>'
 													+'<div class="con">'
 														+'<label>【用户名】'+comment.username+'</label>'
 														+'<p>'+comment.content+'</p>'	  	
@@ -178,7 +178,7 @@
 
 										<li>
 											<div class="pic">
-												<img src="/images/${comment.userimag}" />
+												<img src="/images/user/${comment.userimag}" />
 											</div>
 											<div class="con">
 												<label>【用户名】${comment.username}</label>
@@ -222,7 +222,7 @@
 									<li>
 										<div class="pic">
 											<a title="" href="${pageContext.request.contextPath}/hotel/getHotel?hnum=${comment.hnum}&hid=${comment.hid}"><img alt="" class="scale-effect"
-												src="/images/${comment.pic}" /></a>
+												src="/images/hotel/${comment.pic}" /></a>
 										</div>
 										<div class="con">
 											<a href="#">${comment.hname}</a> <span><i
